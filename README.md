@@ -1,7 +1,12 @@
 # NCNCA-Lap-Counter
-This is an electronic lap counter for use at the finish line of bike (or other) races.  It has two 9" solenoid activated 7-segment digits. It is run by an Arduino controlled by a little remote control with buttons "A," "B," "C," and "D."   It has a solar panel to charge the batteries, but apparently can be powered by an external power supply.![PXL_20230822_223443245](https://github.com/kemptm/NCNCA-Lap-Counter/assets/45501075/8364a989-074f-4d7d-8a23-a2da7b691e26)
+This is an electronic lap counter for use at the finish line of bike (or other) races.  It has two 9" solenoid activated 7-segment digits. It is run by an Arduino controlled by a little remote control with buttons "A," "B," "C," and "D."   It has a solar panel to charge the batteries, but apparently can be powered by an external power supply. 
+![PXL_20230823_163003984](doc/images/PXL_20230823_163003984.jpg)
 
-Mike's son built it as a college project.  There is no documentation.  It's not new, so some of the parts are obsolete.  If I can get it operational, Mike intends to donate it to the [[NCNCA]]. 
+![PXL_20230822_223443245](doc/images/PXL_20230822_223443245.jpg)
+
+![PXL_20230825_211738056.MP](doc/images/PXL_20230825_211738056.MP.jpg)
+
+Mike's son built it as a college project.  There is no documentation.  It's not new, so some of the parts are obsolete.  If I can get it operational, Mike intends to donate it to the NCNCA. 
 
 Some emails:
 
@@ -47,8 +52,3 @@ Tim.
 From Mike  8/23/2023:
 
 I’m not exactly sure.  My son called me happily saying it was finished, then a while later called me again saying it had a problem. He flailed at it for a week or so then gave up.
-
-
-
-
-
