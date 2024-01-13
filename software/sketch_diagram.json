@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -201.4, "left": 211.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "relay1:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "relay1:VCC", "mega:5V", "red", [ "h-48", "v364.8" ] ],
+    [ "relay1:IN", "mega:13", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
