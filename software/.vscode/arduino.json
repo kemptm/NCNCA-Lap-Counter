@@ -2,5 +2,5 @@
     "port": "/dev/ttyACM0",
     "configuration": "cpu=atmega2560",
     "board": "arduino:avr:mega",
-    "sketch": "blink_leds/blink_leds.ino"
+    "sketch": "LapCounter/LapCounter.ino"
 }
