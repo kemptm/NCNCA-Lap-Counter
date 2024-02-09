@@ -38,7 +38,7 @@ const unsigned long TIMEOUT_MILLISECONDS = 7200000; // two hours
       SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN // 1
    },
    {
-      SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::HIDDEN // 2
+      SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN  // 2
    },
    {
       SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::SHOWN  // 3
@@ -50,7 +50,7 @@ const unsigned long TIMEOUT_MILLISECONDS = 7200000; // two hours
       SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 5
    },
    {
-      SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 6
+      SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 6
    },
    {
       SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN // 7
@@ -59,7 +59,7 @@ const unsigned long TIMEOUT_MILLISECONDS = 7200000; // two hours
       SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 8
    },
    {
-      SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 9
+      SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::SHOWN, SegmentStatus::HIDDEN,SegmentStatus::SHOWN, SegmentStatus::SHOWN  // 9
    },
    {
       SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN,SegmentStatus::HIDDEN // ()

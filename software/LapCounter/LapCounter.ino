@@ -2,7 +2,8 @@
 #include "Segment.hpp"
 #include "Digit.hpp"
 
-Segment segments[NUMBER_OF_SEGMENTS];
+Segment unitsSegments[NUMBER_OF_SEGMENTS];
+Segment tensSegments[NUMBER_OF_SEGMENTS];
 Digit tensDigit;
 Digit unitsDigit;
 unsigned long currentTime;
@@ -19,15 +20,16 @@ void setup()
     /// Define the pins for selecting a segment and deciding whether to set or reset
     for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
     {
-        segments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
+        unitsSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
+        tensSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
 
         pinMode(segEnablePins[i], OUTPUT);
         pinMode(segSetResetPins[i], OUTPUT);
     };
     // Define the digits
-    tensDigit.initDigit(tensDigitPin, segments, NUMBER_OF_SEGMENTS);
+    tensDigit.initDigit(tensDigitPin, tensSegments, NUMBER_OF_SEGMENTS);
     pinMode(tensDigitPin, OUTPUT);
-    unitsDigit.initDigit(unitsDigitPin, segments, NUMBER_OF_SEGMENTS);
+    unitsDigit.initDigit(unitsDigitPin, unitsSegments, NUMBER_OF_SEGMENTS);
     pinMode(unitsDigitPin, OUTPUT);
 
     // Define the input pins for the radio remote control
@@ -44,6 +46,14 @@ void setup()
     units = 0;
 
     Serial.begin(115200);
+
+    // Power On Self test
+    unitsDigit.update(8);
+    tensDigit.update(8);
+    delay(3000);
+    tensDigit.reset();
+    unitsDigit.reset();
+
     Serial.println("Initialized");
 };
 
@@ -52,9 +62,14 @@ void loop()
 {
     // check to see if we should shut down
     currentTime = millis();
+    if (currentTime < lastTime) 
+    {
+         // Clock wrapped (really unlikely)
+        lastTime = currentTime;
+    }
     if (currentTime - lastTime > TIMEOUT_MILLISECONDS)
-    { // clock wrapped
-        // clock wrapped
+    { 
+        // Timed out
         digitalWrite(powerDisablePin, LOW); // drop the power
         delay(1000);                        // wait until power dies
     }                                       // doesn't make it out of here
@@ -82,6 +97,8 @@ void loop()
             tensDigit.update(tens);
             unitsDigit.update(units);
 
+            lastTime = currentTime;
+
         };
         // If B button has gone high (different from last read) process it
         if ((currentRadioPinState[BUTTON_B] == HIGH) && (lastRadioPinState[BUTTON_B] == LOW))
@@ -93,7 +110,7 @@ void loop()
             if (units == 0) 
             {
                 units = 9;
-                tens = tens>0?tens--:0;
+                tens = tens>0?tens-1:0;
             }
             else {
                 units--;
@@ -101,6 +118,9 @@ void loop()
              
             tensDigit.update(tens);
             unitsDigit.update(units);
+
+            lastTime = currentTime;
+
         };
         // If C button has gone high (different from last read) process it
         if ((currentRadioPinState[BUTTON_C] == HIGH) && (lastRadioPinState[BUTTON_C] == LOW))
@@ -111,6 +131,9 @@ void loop()
 
             tens = 0;
             units = 0;
+
+            lastTime = currentTime;
+
         };
         // If D button has gone high (different from last read) process it
         if ((currentRadioPinState[BUTTON_D] == HIGH) && (lastRadioPinState[BUTTON_D] == LOW))
@@ -123,6 +146,9 @@ void loop()
 
             tensDigit.update(tens);
             unitsDigit.update(units);
+
+            lastTime = currentTime;
+
         };
 
         for (int i = 0; i < NUMBER_OF_RADIO_PINS; i++) // move current pin state to last pin state
