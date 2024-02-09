@@ -1761,7 +1761,7 @@
   (symbol (lib_id "Project Library:8_Relay_Module_B") (at 101.6 119.38 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5a9f5098-c327-48e2-aae3-dfd878f6430f)
-    (property "Reference" "8RM3" (at 85.725 81.28 90)
+    (property "Reference" "8RM2" (at 85.725 81.28 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8 Relay Module" (at 85.725 83.82 90)
@@ -1813,7 +1813,7 @@
     (instances
       (project "NCNCA-Lap_Counter"
         (path "/f7d7cc02-a4fd-4b7a-92a3-de67af0c24a1/5a0f4047-acb5-4a8c-b6a8-12c7c3c67579"
-          (reference "8RM3") (unit 1)
+          (reference "8RM2") (unit 1)
         )
       )
     )
@@ -1847,7 +1847,7 @@
   (symbol (lib_id "Project Library:8_Relay_Module_B") (at 187.96 76.2 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aa40ce9b-5a83-455b-bfef-a2bf70ef7fe2)
-    (property "Reference" "8RM4" (at 172.085 38.1 90)
+    (property "Reference" "8RM1" (at 172.085 38.1 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8 Relay Module" (at 172.085 40.64 90)
@@ -1899,7 +1899,7 @@
     (instances
       (project "NCNCA-Lap_Counter"
         (path "/f7d7cc02-a4fd-4b7a-92a3-de67af0c24a1/5a0f4047-acb5-4a8c-b6a8-12c7c3c67579"
-          (reference "8RM4") (unit 1)
+          (reference "8RM1") (unit 1)
         )
       )
     )
@@ -1908,7 +1908,7 @@
   (symbol (lib_id "Project Library:7_Segment_Solenoid") (at 344.17 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bcbf7e32-6e83-4b64-a90c-892180134b72)
-    (property "Reference" "7SD4" (at 344.17 137.16 0)
+    (property "Reference" "7SD2" (at 344.17 137.16 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "7 Segment Digit Display Solenoid Driven" (at 344.17 139.7 0)
@@ -1944,7 +1944,7 @@
     (instances
       (project "NCNCA-Lap_Counter"
         (path "/f7d7cc02-a4fd-4b7a-92a3-de67af0c24a1/5a0f4047-acb5-4a8c-b6a8-12c7c3c67579"
-          (reference "7SD4") (unit 1)
+          (reference "7SD2") (unit 1)
         )
       )
     )
@@ -1953,7 +1953,7 @@
   (symbol (lib_name "7_Segment_Solenoid_1") (lib_id "Project Library:7_Segment_Solenoid") (at 340.36 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cb8b9f5f-c770-4dc1-90b9-2b289a87c89b)
-    (property "Reference" "7SD3" (at 340.36 38.1 0)
+    (property "Reference" "7SD1" (at 340.36 38.1 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "7 Segment Digit Display Solenoid Driven" (at 340.36 40.64 0)
@@ -1989,7 +1989,7 @@
     (instances
       (project "NCNCA-Lap_Counter"
         (path "/f7d7cc02-a4fd-4b7a-92a3-de67af0c24a1/5a0f4047-acb5-4a8c-b6a8-12c7c3c67579"
-          (reference "7SD3") (unit 1)
+          (reference "7SD1") (unit 1)
         )
       )
     )
