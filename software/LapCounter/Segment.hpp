@@ -3,8 +3,8 @@
 /// 	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\Segment.hpp
 /// </file>
 ///
-/// <copyright file="Segment.hpp" company="MyCompany.com">
-/// 	Copyright (c) 2024 MyCompany.com. All rights reserved.
+/// <copyright file="Segment.hpp" company="TMKempEngineering.com">
+/// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
 /// </copyright>
 ///
 /// <summary>	Declares the segment class. </summary>

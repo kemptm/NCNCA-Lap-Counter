@@ -3,8 +3,8 @@
 /// 	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\constants.h
 /// </file>
 ///
-/// <copyright file="constants.h" company="MyCompany.com">
-/// 	Copyright (c) 2024 MyCompany.com. All rights reserved.
+/// <copyright file="constants.h" company="TMKempEngineering.com">
+/// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
 /// </copyright>
 ///
 /// <summary>	Declares the constants class. </summary>
@@ -68,8 +68,8 @@ const unsigned long TIMEOUT_MILLISECONDS = 7200000;
 
 enum class SegmentStatus
 {
-   HIDDEN,
-   SHOWN,
+    HIDDEN,
+    SHOWN,
 };
 
 /// <summary>	The button a. </summary>

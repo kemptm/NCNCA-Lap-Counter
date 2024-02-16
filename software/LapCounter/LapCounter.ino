@@ -1,3 +1,12 @@
+///-------------------------------------------------------------------------------------------------
+/// <file>	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\LapCounter.ino </file>
+///
+/// <copyright file="Digit.hpp" company="TMKempEngineering.com">
+/// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
+/// </copyright>
+///
+/// <summary>	This is where the system initialization and main loop live. </summary>
+///-------------------------------------------------------------------------------------------------
 #include "constants.h"
 #include "Segment.hpp"
 #include "Digit.hpp"

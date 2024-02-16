@@ -1,8 +1,8 @@
 ///-------------------------------------------------------------------------------------------------
 /// <file>	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\Digit.hpp </file>
 ///
-/// <copyright file="Digit.hpp" company="MyCompany.com">
-/// 	Copyright (c) 2024 MyCompany.com. All rights reserved.
+/// <copyright file="Digit.hpp" company="TMKempEngineering.com">
+/// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
 /// </copyright>
 ///
 /// <summary>	Declares the digit class. </summary>
