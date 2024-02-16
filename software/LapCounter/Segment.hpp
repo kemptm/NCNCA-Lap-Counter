@@ -21,7 +21,8 @@
 /// <remarks>	Kemp, 2/8/2024. </remarks>
 ///-------------------------------------------------------------------------------------------------
 
-class Segment {
+class Segment
+{
     /// <summary>	The segment pin. </summary>
     int segmentPin;
     /// <summary>	The set reset pin. </summary>
@@ -29,8 +30,7 @@ class Segment {
     /// <summary>	The status. </summary>
     SegmentStatus status;
 
-    public:
-
+public:
     ///-------------------------------------------------------------------------------------------------
     /// <summary>
     /// 	@brief Initialize the segment class. This, unfortunately can't happen in a constructor
@@ -44,7 +44,8 @@ class Segment {
     /// <param name="srp"> 	The srp. </param>
     ///-------------------------------------------------------------------------------------------------
 
-    void initSegment(int segp, int srp) {
+    void initSegment(int segp, int srp)
+    {
         segmentPin = segp;
         setResetPin = srp;
         status = SegmentStatus::SHOWN; // to force an update
@@ -57,13 +58,14 @@ class Segment {
     /// <remarks>	Kemp, 2/8/2024. </remarks>
     ///-------------------------------------------------------------------------------------------------
 
-    void reset(){
+    void reset()
+    {
         digitalWrite(setResetPin, HIGH);
         digitalWrite(segmentPin, SELECTED);
         delay(SOLENOID_DELAY);
         digitalWrite(segmentPin, NOT_SELECTED);
         digitalWrite(setResetPin, HIGH);
-        
+
         status = SegmentStatus::HIDDEN;
     };
 
@@ -79,16 +81,19 @@ class Segment {
     /// <param name="ss">	The ss. </param>
     ///-------------------------------------------------------------------------------------------------
 
-    void update(SegmentStatus ss) {
-        if (ss != status) {
-            digitalWrite(setResetPin,ss==SegmentStatus::HIDDEN?HIGH:LOW);
-            digitalWrite(segmentPin,SELECTED);
+    void update(SegmentStatus ss)
+    {
+        if (ss != status)
+        {
+            digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW);
+            digitalWrite(segmentPin, SELECTED);
             delay(SOLENOID_DELAY);
-            digitalWrite(segmentPin,NOT_SELECTED);
-            digitalWrite(setResetPin,HIGH);
+            digitalWrite(segmentPin, NOT_SELECTED);
+            digitalWrite(setResetPin, HIGH);
 
             status = ss;
         }
     };
 };
+
 #endif

@@ -23,15 +23,16 @@
 /// <remarks>	Kemp, 2/8/2024. </remarks>
 ///-------------------------------------------------------------------------------------------------
 
-class Digit {
+class Digit
+{
     /// <summary>	The digit select. </summary>
     short digitSelect;
     /// <summary>	The segments. </summary>
     Segment *segments;
     /// <summary>	Number of segments. </summary>
     short segCount;
-public:
 
+public:
     ///-------------------------------------------------------------------------------------------------
     /// <summary>
     /// 	@brief Initialize the digit.  Can't use a constructor because one of the parameters is an
@@ -50,7 +51,8 @@ public:
     /// <param name="ct">	 	The ct. </param>
     ///-------------------------------------------------------------------------------------------------
 
-    void initDigit(short digSel,Segment* segs, short ct){
+    void initDigit(short digSel, Segment *segs, short ct)
+    {
         digitSelect = digSel;
         segments = segs;
         segCount = ct;
@@ -62,12 +64,14 @@ public:
     /// <remarks>	Kemp, 2/8/2024. </remarks>
     ///-------------------------------------------------------------------------------------------------
 
-    void reset() { 
-        digitalWrite(digitSelect,SELECTED);
-        for (int i = 0; i < segCount;i++) {
+    void reset()
+    {
+        digitalWrite(digitSelect, SELECTED);
+        for (int i = 0; i < segCount; i++)
+        {
             segments[i].reset();
         }
-        digitalWrite(digitSelect,NOT_SELECTED);
+        digitalWrite(digitSelect, NOT_SELECTED);
     };
 
     ///-------------------------------------------------------------------------------------------------
@@ -81,13 +85,16 @@ public:
     /// <param name="newValue">	The new value. </param>
     ///-------------------------------------------------------------------------------------------------
 
-    void update(int newValue) {
-        short val = ((newValue == 0) && (digitSelect == tensDigitPin))?10:newValue; // select blank for zero if tens digitalWrite
-        digitalWrite(digitSelect,SELECTED);
-        for (int i = 0;i < NUMBER_OF_SEGMENTS; i++) {
+    void update(int newValue)
+    {
+        short val = ((newValue == 0) && (digitSelect == tensDigitPin)) ? 10 : newValue; // select blank for zero if tens digitalWrite
+        digitalWrite(digitSelect, SELECTED);
+        for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
+        {
             segments[i].update(digitSegments[val][i]);
         }
-        digitalWrite(digitSelect,NOT_SELECTED);
+        digitalWrite(digitSelect, NOT_SELECTED);
     };
 };
+
 #endif
