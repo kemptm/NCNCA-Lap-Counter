@@ -1,0 +1,171 @@
+\doxysection{D\+:/\+Documents/\+Ki\+Cad/7.0/projects/\+NCNCA-\/\+Lap-\/\+Counter/software/\+Lap\+Counter/\+Lap\+Counter.cpp File Reference}
+\hypertarget{_lap_counter_8cpp}{}\label{_lap_counter_8cpp}\index{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/LapCounter.cpp@{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/LapCounter.cpp}}
+{\ttfamily \#include "{}constants.\+h"{}}\newline
+{\ttfamily \#include "{}Segment.\+hpp"{}}\newline
+{\ttfamily \#include "{}Digit.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_lap_counter_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Setup is called once during the initialization during power up or after a reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_lap_counter_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loop is called repeatedly forever during power up time after setup is run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{_lap_counter_8cpp_a8e1d909a6f41bbe5efd0fc1872317d53}{units\+Segments}} \mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The units segments\mbox{[} number of segments\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{_lap_counter_8cpp_af2e5d22c08111236d0b80ad8be5b3654}{tens\+Segments}} \mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The tens segments\mbox{[} number of segments\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_digit}{Digit}} \mbox{\hyperlink{_lap_counter_8cpp_ab4ca8453a2de6f20e1183a7cf2c50591}{tens\+Digit}}
+\begin{DoxyCompactList}\small\item\em The tens digit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_digit}{Digit}} \mbox{\hyperlink{_lap_counter_8cpp_aa6ec54e6bede2c641f0ece39ebc98eca}{units\+Digit}}
+\begin{DoxyCompactList}\small\item\em The units digit. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{_lap_counter_8cpp_af205655c0c86fc6aaf4c8450d8243938}{current\+Time}}
+\begin{DoxyCompactList}\small\item\em The current time. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{_lap_counter_8cpp_a22cb446e5271d5d2c4b2e23792fb1966}{last\+Time}}
+\begin{DoxyCompactList}\small\item\em The last time. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{_lap_counter_8cpp_a5a5ecad023f849c539b10965ffe0e2a3}{tens}}
+\begin{DoxyCompactList}\small\item\em The tens. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{_lap_counter_8cpp_ace142410fc110c2a75a8421f56cdf095}{units}}
+\begin{DoxyCompactList}\small\item\em The units. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{_lap_counter_8cpp_ac228c25358874a77ca3f55e7edca934e}{current\+Radio\+Pin\+State}} \mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{LOW, LOW, LOW, LOW, LOW\}
+\begin{DoxyCompactList}\small\item\em The current radio pin state\mbox{[} number of radio pins\mbox{]}. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{_lap_counter_8cpp_a2122a823620d6270310c7964206112d2}{last\+Radio\+Pin\+State}} \mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{LOW, LOW, LOW, LOW, LOW\}
+\begin{DoxyCompactList}\small\item\em The last radio pin state\mbox{[} number of radio pins\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_lap_counter_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{_lap_counter_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+\index{LapCounter.cpp@{LapCounter.cpp}!loop@{loop}}
+\index{loop@{loop}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loop is called repeatedly forever during power up time after setup is run. 
+
+\DoxyHorRuler{0}
+\hypertarget{_lap_counter_8cpp_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{_lap_counter_8cpp_autotoc_md11}
+Button A "{}\+Above"{} means increment (select the next above of) the units digit by one. If it increments from 9, then increment the tens digit by one. You can increment the 10s digit back to zero from 99.
+
+Button B "{}\+Below"{} means decrement (select the next below of) the units digit by one. If it decrements from zero, it will be replaced with 9 and the tens digit will decrement by one. The tens digit will not decrement from zero.
+
+Reset "{}\+Clear"{} means set all segments to their HIDDEN state.
+
+Multiply the number by ten, "{}\+Decimal"{}. That is the units digit value will replace the tens digit value. The tens digit value is lost. The units digit becomes 0.\Hypertarget{_lap_counter_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{_lap_counter_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{LapCounter.cpp@{LapCounter.cpp}!setup@{setup}}
+\index{setup@{setup}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup is called once during the initialization during power up or after a reset. 
+
+\DoxyHorRuler{0}
+\hypertarget{_lap_counter_8cpp_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{_lap_counter_8cpp_autotoc_md10}
+Define the pins for selecting a segment and deciding whether to set or reset
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_lap_counter_8cpp_ac228c25358874a77ca3f55e7edca934e}\label{_lap_counter_8cpp_ac228c25358874a77ca3f55e7edca934e} 
+\index{LapCounter.cpp@{LapCounter.cpp}!currentRadioPinState@{currentRadioPinState}}
+\index{currentRadioPinState@{currentRadioPinState}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{currentRadioPinState}{currentRadioPinState}}
+{\footnotesize\ttfamily short current\+Radio\+Pin\+State\mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{LOW, LOW, LOW, LOW, LOW\}}
+
+
+
+The current radio pin state\mbox{[} number of radio pins\mbox{]}. 
+
+\Hypertarget{_lap_counter_8cpp_af205655c0c86fc6aaf4c8450d8243938}\label{_lap_counter_8cpp_af205655c0c86fc6aaf4c8450d8243938} 
+\index{LapCounter.cpp@{LapCounter.cpp}!currentTime@{currentTime}}
+\index{currentTime@{currentTime}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{currentTime}{currentTime}}
+{\footnotesize\ttfamily unsigned long current\+Time}
+
+
+
+The current time. 
+
+\Hypertarget{_lap_counter_8cpp_a2122a823620d6270310c7964206112d2}\label{_lap_counter_8cpp_a2122a823620d6270310c7964206112d2} 
+\index{LapCounter.cpp@{LapCounter.cpp}!lastRadioPinState@{lastRadioPinState}}
+\index{lastRadioPinState@{lastRadioPinState}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{lastRadioPinState}{lastRadioPinState}}
+{\footnotesize\ttfamily short last\+Radio\+Pin\+State\mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{LOW, LOW, LOW, LOW, LOW\}}
+
+
+
+The last radio pin state\mbox{[} number of radio pins\mbox{]}. 
+
+\Hypertarget{_lap_counter_8cpp_a22cb446e5271d5d2c4b2e23792fb1966}\label{_lap_counter_8cpp_a22cb446e5271d5d2c4b2e23792fb1966} 
+\index{LapCounter.cpp@{LapCounter.cpp}!lastTime@{lastTime}}
+\index{lastTime@{lastTime}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{lastTime}{lastTime}}
+{\footnotesize\ttfamily unsigned long last\+Time}
+
+
+
+The last time. 
+
+\Hypertarget{_lap_counter_8cpp_a5a5ecad023f849c539b10965ffe0e2a3}\label{_lap_counter_8cpp_a5a5ecad023f849c539b10965ffe0e2a3} 
+\index{LapCounter.cpp@{LapCounter.cpp}!tens@{tens}}
+\index{tens@{tens}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{tens}{tens}}
+{\footnotesize\ttfamily unsigned short tens}
+
+
+
+The tens. 
+
+\Hypertarget{_lap_counter_8cpp_ab4ca8453a2de6f20e1183a7cf2c50591}\label{_lap_counter_8cpp_ab4ca8453a2de6f20e1183a7cf2c50591} 
+\index{LapCounter.cpp@{LapCounter.cpp}!tensDigit@{tensDigit}}
+\index{tensDigit@{tensDigit}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{tensDigit}{tensDigit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_digit}{Digit}} tens\+Digit}
+
+
+
+The tens digit. 
+
+\Hypertarget{_lap_counter_8cpp_af2e5d22c08111236d0b80ad8be5b3654}\label{_lap_counter_8cpp_af2e5d22c08111236d0b80ad8be5b3654} 
+\index{LapCounter.cpp@{LapCounter.cpp}!tensSegments@{tensSegments}}
+\index{tensSegments@{tensSegments}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{tensSegments}{tensSegments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} tens\+Segments\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}}
+
+
+
+The tens segments\mbox{[} number of segments\mbox{]}. 
+
+\Hypertarget{_lap_counter_8cpp_ace142410fc110c2a75a8421f56cdf095}\label{_lap_counter_8cpp_ace142410fc110c2a75a8421f56cdf095} 
+\index{LapCounter.cpp@{LapCounter.cpp}!units@{units}}
+\index{units@{units}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{units}{units}}
+{\footnotesize\ttfamily unsigned short units}
+
+
+
+The units. 
+
+\Hypertarget{_lap_counter_8cpp_aa6ec54e6bede2c641f0ece39ebc98eca}\label{_lap_counter_8cpp_aa6ec54e6bede2c641f0ece39ebc98eca} 
+\index{LapCounter.cpp@{LapCounter.cpp}!unitsDigit@{unitsDigit}}
+\index{unitsDigit@{unitsDigit}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{unitsDigit}{unitsDigit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_digit}{Digit}} units\+Digit}
+
+
+
+The units digit. 
+
+\Hypertarget{_lap_counter_8cpp_a8e1d909a6f41bbe5efd0fc1872317d53}\label{_lap_counter_8cpp_a8e1d909a6f41bbe5efd0fc1872317d53} 
+\index{LapCounter.cpp@{LapCounter.cpp}!unitsSegments@{unitsSegments}}
+\index{unitsSegments@{unitsSegments}!LapCounter.cpp@{LapCounter.cpp}}
+\doxysubsubsection{\texorpdfstring{unitsSegments}{unitsSegments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} units\+Segments\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}}
+
+
+
+The units segments\mbox{[} number of segments\mbox{]}. 
+

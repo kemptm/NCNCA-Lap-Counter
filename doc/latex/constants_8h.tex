@@ -1,0 +1,296 @@
+\doxysection{D\+:/\+Documents/\+Ki\+Cad/7.0/projects/\+NCNCA-\/\+Lap-\/\+Counter/software/\+Lap\+Counter/constants.h File Reference}
+\hypertarget{constants_8h}{}\label{constants_8h}\index{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/constants.h@{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/constants.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{constants_8h_ac7a36608ac7b2450d147e32c12ef6182}{CONSTANTS\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}~7
+\begin{DoxyCompactList}\small\item\em A macro that defines number of segments. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{constants_8h_a56d4445bb325117c85912f69b84d6b7d}{NUMBER\+\_\+\+OF\+\_\+\+DIGITS}}~2
+\begin{DoxyCompactList}\small\item\em A macro that defines number of digits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}~5
+\begin{DoxyCompactList}\small\item\em A macro that defines number of radio pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}} \{ \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595a347e628a8f72626a0611ef842fe9d304}{HIDDEN}}
+, \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595a964ee5bf12d775d179554a8c12f752ae}{SHOWN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Values that represent segment status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const short \mbox{\hyperlink{constants_8h_abfd43852238a5a5d3e674ef1bf988054}{seg\+Enable\+Pins}} \mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]} = \{22, 24, 26, 28, 30, 32, 34 \}
+\begin{DoxyCompactList}\small\item\em The segment enable pins\mbox{[} number of segments\mbox{]}. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a99023c57495989f5cb5125ef83594dcb}{seg\+Set\+Reset\+Pins}} \mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]} = \{23, 25, 27, 29, 31, 33, 35\}
+\begin{DoxyCompactList}\small\item\em The segment set reset pins\mbox{[} number of segments\mbox{]}. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a120587d669897e03f67bf3098fa2959a}{radio\+Pins}} \mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{54, 52, 50, 48,46\}
+\begin{DoxyCompactList}\small\item\em The radio pins\mbox{[} number of radio pins\mbox{]}. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_ab19bfb85acd1524cad204df9a106f07e}{tens\+Digit\+Pin}} = 36
+\begin{DoxyCompactList}\small\item\em The tens digit pin. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_adf02d91338a0c7d38990db69865c5bc5}{units\+Digit\+Pin}} = 37
+\begin{DoxyCompactList}\small\item\em The units digit pin. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_aa334d5c7620b332947241c7cf092d40b}{power\+Disable\+Pin}} = 55
+\begin{DoxyCompactList}\small\item\em The power disable pin. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{constants_8h_ab73e9771b20bb0bf0301a01b0ab19dbd}{SOLENOID\+\_\+\+DELAY}} = 100
+\begin{DoxyCompactList}\small\item\em The solenoid delay. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{constants_8h_afc572d579aecbc52ec2c3b619993d9d0}{SELECTED}} = LOW
+\begin{DoxyCompactList}\small\item\em The selected. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{constants_8h_a65f3db6ddf94f804187c0773bcdfe2a9}{NOT\+\_\+\+SELECTED}} = HIGH
+\begin{DoxyCompactList}\small\item\em The not selected. \end{DoxyCompactList}\item 
+const unsigned long \mbox{\hyperlink{constants_8h_a585c6bde05ce0195237042f67c1338ae}{TIMEOUT\+\_\+\+MILLISECONDS}} = 7200000
+\begin{DoxyCompactList}\small\item\em two hours. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a452d01d7928f809ecc1bbe94db6ecaba}{BUTTON\+\_\+A}} = 0
+\begin{DoxyCompactList}\small\item\em The button a. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a05a415970f9f70234169f57230b85ff6}{BUTTON\+\_\+B}} = 1
+\begin{DoxyCompactList}\small\item\em The button b. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a787d4563a0cde5200b646446df89bf56}{BUTTON\+\_\+C}} = 2
+\begin{DoxyCompactList}\small\item\em The button c. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_afc6ac5e6bad13eca293f163352cd426f}{BUTTON\+\_\+D}} = 3
+\begin{DoxyCompactList}\small\item\em The button d. \end{DoxyCompactList}\item 
+const short \mbox{\hyperlink{constants_8h_a1afc4a8a7dd4ab06ce5e27d80a520f12}{BUTTON\+\_\+\+VT}} = 4
+\begin{DoxyCompactList}\small\item\em The button vt. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}} \mbox{\hyperlink{constants_8h_aba02642ff9731bbe51f9da6d597adaf5}{digit\+Segments}} \mbox{[}11\mbox{]}\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The digit segments\mbox{[} 11\mbox{]}\mbox{[} number of segments\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{constants_8h_ac7a36608ac7b2450d147e32c12ef6182}\label{constants_8h_ac7a36608ac7b2450d147e32c12ef6182} 
+\index{constants.h@{constants.h}!CONSTANTS\_H@{CONSTANTS\_H}}
+\index{CONSTANTS\_H@{CONSTANTS\_H}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{CONSTANTS\_H}{CONSTANTS\_H}}
+{\footnotesize\ttfamily \#define CONSTANTS\+\_\+H}
+
+
+
+
+
+\DoxyHorRuler{0}
+ $<$file$>$ D\+:\textbackslash{}\+Documents\textbackslash{}\+Ki\+Cad\textbackslash{}7.\+0\textbackslash{}projects\textbackslash{}\+NCNCA\doxylink{constants_8h}{-\/\+Lap-\/\+Counter\textbackslash{}software\textbackslash{}\+Lap\+Counter\textbackslash{}constants.\+h} $<$/file$>$
+
+$<$copyright file="{}constants.\+h"{} company="{}\+My\+Company.\+com"{}$>$ Copyright (c) 2024 My\+Company.\+com. All rights reserved. $<$/copyright$>$\hypertarget{constants_8h_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{Declares the constants class. }{Declares the constants class. }}\label{constants_8h_autotoc_md0}
+\Hypertarget{constants_8h_a56d4445bb325117c85912f69b84d6b7d}\label{constants_8h_a56d4445bb325117c85912f69b84d6b7d} 
+\index{constants.h@{constants.h}!NUMBER\_OF\_DIGITS@{NUMBER\_OF\_DIGITS}}
+\index{NUMBER\_OF\_DIGITS@{NUMBER\_OF\_DIGITS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_DIGITS}{NUMBER\_OF\_DIGITS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+DIGITS~2}
+
+
+
+A macro that defines number of digits. 
+
+\DoxyHorRuler{0}
+\hypertarget{constants_8h_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{constants_8h_autotoc_md2}
+\Hypertarget{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}\label{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc} 
+\index{constants.h@{constants.h}!NUMBER\_OF\_RADIO\_PINS@{NUMBER\_OF\_RADIO\_PINS}}
+\index{NUMBER\_OF\_RADIO\_PINS@{NUMBER\_OF\_RADIO\_PINS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_RADIO\_PINS}{NUMBER\_OF\_RADIO\_PINS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS~5}
+
+
+
+A macro that defines number of radio pins. 
+
+\DoxyHorRuler{0}
+\hypertarget{constants_8h_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{constants_8h_autotoc_md3}
+\Hypertarget{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}\label{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc} 
+\index{constants.h@{constants.h}!NUMBER\_OF\_SEGMENTS@{NUMBER\_OF\_SEGMENTS}}
+\index{NUMBER\_OF\_SEGMENTS@{NUMBER\_OF\_SEGMENTS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_SEGMENTS}{NUMBER\_OF\_SEGMENTS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS~7}
+
+
+
+A macro that defines number of segments. 
+
+\DoxyHorRuler{0}
+\hypertarget{constants_8h_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{constants_8h_autotoc_md1}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{constants_8h_a949f7706a0328024100d2502d52be595}\label{constants_8h_a949f7706a0328024100d2502d52be595} 
+\index{constants.h@{constants.h}!SegmentStatus@{SegmentStatus}}
+\index{SegmentStatus@{SegmentStatus}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{SegmentStatus}{SegmentStatus}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Values that represent segment status. 
+
+\DoxyHorRuler{0}
+\hypertarget{constants_8h_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{constants_8h_autotoc_md4}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIDDEN@{HIDDEN}!constants.h@{constants.h}}\index{constants.h@{constants.h}!HIDDEN@{HIDDEN}}}\Hypertarget{constants_8h_a949f7706a0328024100d2502d52be595a347e628a8f72626a0611ef842fe9d304}\label{constants_8h_a949f7706a0328024100d2502d52be595a347e628a8f72626a0611ef842fe9d304} 
+HIDDEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOWN@{SHOWN}!constants.h@{constants.h}}\index{constants.h@{constants.h}!SHOWN@{SHOWN}}}\Hypertarget{constants_8h_a949f7706a0328024100d2502d52be595a964ee5bf12d775d179554a8c12f752ae}\label{constants_8h_a949f7706a0328024100d2502d52be595a964ee5bf12d775d179554a8c12f752ae} 
+SHOWN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{constants_8h_a452d01d7928f809ecc1bbe94db6ecaba}\label{constants_8h_a452d01d7928f809ecc1bbe94db6ecaba} 
+\index{constants.h@{constants.h}!BUTTON\_A@{BUTTON\_A}}
+\index{BUTTON\_A@{BUTTON\_A}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_A}{BUTTON\_A}}
+{\footnotesize\ttfamily const short BUTTON\+\_\+A = 0}
+
+
+
+The button a. 
+
+\Hypertarget{constants_8h_a05a415970f9f70234169f57230b85ff6}\label{constants_8h_a05a415970f9f70234169f57230b85ff6} 
+\index{constants.h@{constants.h}!BUTTON\_B@{BUTTON\_B}}
+\index{BUTTON\_B@{BUTTON\_B}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_B}{BUTTON\_B}}
+{\footnotesize\ttfamily const short BUTTON\+\_\+B = 1}
+
+
+
+The button b. 
+
+\Hypertarget{constants_8h_a787d4563a0cde5200b646446df89bf56}\label{constants_8h_a787d4563a0cde5200b646446df89bf56} 
+\index{constants.h@{constants.h}!BUTTON\_C@{BUTTON\_C}}
+\index{BUTTON\_C@{BUTTON\_C}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_C}{BUTTON\_C}}
+{\footnotesize\ttfamily const short BUTTON\+\_\+C = 2}
+
+
+
+The button c. 
+
+\Hypertarget{constants_8h_afc6ac5e6bad13eca293f163352cd426f}\label{constants_8h_afc6ac5e6bad13eca293f163352cd426f} 
+\index{constants.h@{constants.h}!BUTTON\_D@{BUTTON\_D}}
+\index{BUTTON\_D@{BUTTON\_D}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_D}{BUTTON\_D}}
+{\footnotesize\ttfamily const short BUTTON\+\_\+D = 3}
+
+
+
+The button d. 
+
+\Hypertarget{constants_8h_a1afc4a8a7dd4ab06ce5e27d80a520f12}\label{constants_8h_a1afc4a8a7dd4ab06ce5e27d80a520f12} 
+\index{constants.h@{constants.h}!BUTTON\_VT@{BUTTON\_VT}}
+\index{BUTTON\_VT@{BUTTON\_VT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_VT}{BUTTON\_VT}}
+{\footnotesize\ttfamily const short BUTTON\+\_\+\+VT = 4}
+
+
+
+The button vt. 
+
+\Hypertarget{constants_8h_aba02642ff9731bbe51f9da6d597adaf5}\label{constants_8h_aba02642ff9731bbe51f9da6d597adaf5} 
+\index{constants.h@{constants.h}!digitSegments@{digitSegments}}
+\index{digitSegments@{digitSegments}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{digitSegments}{digitSegments}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}} digit\+Segments\mbox{[}11\mbox{]}\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]}}
+
+
+
+The digit segments\mbox{[} 11\mbox{]}\mbox{[} number of segments\mbox{]}. 
+
+\Hypertarget{constants_8h_a65f3db6ddf94f804187c0773bcdfe2a9}\label{constants_8h_a65f3db6ddf94f804187c0773bcdfe2a9} 
+\index{constants.h@{constants.h}!NOT\_SELECTED@{NOT\_SELECTED}}
+\index{NOT\_SELECTED@{NOT\_SELECTED}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SELECTED}{NOT\_SELECTED}}
+{\footnotesize\ttfamily const int NOT\+\_\+\+SELECTED = HIGH}
+
+
+
+The not selected. 
+
+\Hypertarget{constants_8h_aa334d5c7620b332947241c7cf092d40b}\label{constants_8h_aa334d5c7620b332947241c7cf092d40b} 
+\index{constants.h@{constants.h}!powerDisablePin@{powerDisablePin}}
+\index{powerDisablePin@{powerDisablePin}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{powerDisablePin}{powerDisablePin}}
+{\footnotesize\ttfamily const short power\+Disable\+Pin = 55}
+
+
+
+The power disable pin. 
+
+\Hypertarget{constants_8h_a120587d669897e03f67bf3098fa2959a}\label{constants_8h_a120587d669897e03f67bf3098fa2959a} 
+\index{constants.h@{constants.h}!radioPins@{radioPins}}
+\index{radioPins@{radioPins}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{radioPins}{radioPins}}
+{\footnotesize\ttfamily const short radio\+Pins\mbox{[}\mbox{\hyperlink{constants_8h_a0b76a593fa51980cf5b1c693154ee8fc}{NUMBER\+\_\+\+OF\+\_\+\+RADIO\+\_\+\+PINS}}\mbox{]} = \{54, 52, 50, 48,46\}}
+
+
+
+The radio pins\mbox{[} number of radio pins\mbox{]}. 
+
+\Hypertarget{constants_8h_abfd43852238a5a5d3e674ef1bf988054}\label{constants_8h_abfd43852238a5a5d3e674ef1bf988054} 
+\index{constants.h@{constants.h}!segEnablePins@{segEnablePins}}
+\index{segEnablePins@{segEnablePins}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{segEnablePins}{segEnablePins}}
+{\footnotesize\ttfamily const short seg\+Enable\+Pins\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]} = \{22, 24, 26, 28, 30, 32, 34 \}}
+
+
+
+The segment enable pins\mbox{[} number of segments\mbox{]}. 
+
+\Hypertarget{constants_8h_a99023c57495989f5cb5125ef83594dcb}\label{constants_8h_a99023c57495989f5cb5125ef83594dcb} 
+\index{constants.h@{constants.h}!segSetResetPins@{segSetResetPins}}
+\index{segSetResetPins@{segSetResetPins}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{segSetResetPins}{segSetResetPins}}
+{\footnotesize\ttfamily const short seg\+Set\+Reset\+Pins\mbox{[}\mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\+\_\+\+OF\+\_\+\+SEGMENTS}}\mbox{]} = \{23, 25, 27, 29, 31, 33, 35\}}
+
+
+
+The segment set reset pins\mbox{[} number of segments\mbox{]}. 
+
+\Hypertarget{constants_8h_afc572d579aecbc52ec2c3b619993d9d0}\label{constants_8h_afc572d579aecbc52ec2c3b619993d9d0} 
+\index{constants.h@{constants.h}!SELECTED@{SELECTED}}
+\index{SELECTED@{SELECTED}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{SELECTED}{SELECTED}}
+{\footnotesize\ttfamily const int SELECTED = LOW}
+
+
+
+The selected. 
+
+\Hypertarget{constants_8h_ab73e9771b20bb0bf0301a01b0ab19dbd}\label{constants_8h_ab73e9771b20bb0bf0301a01b0ab19dbd} 
+\index{constants.h@{constants.h}!SOLENOID\_DELAY@{SOLENOID\_DELAY}}
+\index{SOLENOID\_DELAY@{SOLENOID\_DELAY}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{SOLENOID\_DELAY}{SOLENOID\_DELAY}}
+{\footnotesize\ttfamily const int SOLENOID\+\_\+\+DELAY = 100}
+
+
+
+The solenoid delay. 
+
+\Hypertarget{constants_8h_ab19bfb85acd1524cad204df9a106f07e}\label{constants_8h_ab19bfb85acd1524cad204df9a106f07e} 
+\index{constants.h@{constants.h}!tensDigitPin@{tensDigitPin}}
+\index{tensDigitPin@{tensDigitPin}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{tensDigitPin}{tensDigitPin}}
+{\footnotesize\ttfamily const short tens\+Digit\+Pin = 36}
+
+
+
+The tens digit pin. 
+
+\Hypertarget{constants_8h_a585c6bde05ce0195237042f67c1338ae}\label{constants_8h_a585c6bde05ce0195237042f67c1338ae} 
+\index{constants.h@{constants.h}!TIMEOUT\_MILLISECONDS@{TIMEOUT\_MILLISECONDS}}
+\index{TIMEOUT\_MILLISECONDS@{TIMEOUT\_MILLISECONDS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_MILLISECONDS}{TIMEOUT\_MILLISECONDS}}
+{\footnotesize\ttfamily const unsigned long TIMEOUT\+\_\+\+MILLISECONDS = 7200000}
+
+
+
+two hours. 
+
+\Hypertarget{constants_8h_adf02d91338a0c7d38990db69865c5bc5}\label{constants_8h_adf02d91338a0c7d38990db69865c5bc5} 
+\index{constants.h@{constants.h}!unitsDigitPin@{unitsDigitPin}}
+\index{unitsDigitPin@{unitsDigitPin}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{unitsDigitPin}{unitsDigitPin}}
+{\footnotesize\ttfamily const short units\+Digit\+Pin = 37}
+
+
+
+The units digit pin. 
+

@@ -1,0 +1,110 @@
+\doxysection{Segment Class Reference}
+\hypertarget{class_segment}{}\label{class_segment}\index{Segment@{Segment}}
+
+
+This class represents one segment of seven that makes up a digit.  
+
+
+
+
+{\ttfamily \#include $<$Segment.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_segment_a658d7fe435548b9284d76f1d9fb7412e}{init\+Segment}} (int segp, int srp)
+\begin{DoxyCompactList}\small\item\em Initialize the segment class. This, unfortunately can\textquotesingle{}t happen in a constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a1be8d90d9a00e3f454dbc03d691ff983}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the segment, that is hide the segment from view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a1c0ea973b30734179918fb5b8def47e9}{update}} (\mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}} ss)
+\begin{DoxyCompactList}\small\item\em Update the segment to the parameter value. If the desired status is the current status, no update is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents one segment of seven that makes up a digit. 
+
+\DoxyHorRuler{0}
+ $<$file$>$ D\+:\textbackslash{}\+Documents\textbackslash{}\+Ki\+Cad\textbackslash{}7.\+0\textbackslash{}projects\textbackslash{}\+NCNCA\doxylink{_segment_8hpp}{-\/\+Lap-\/\+Counter\textbackslash{}software\textbackslash{}\+Lap\+Counter\textbackslash{}\+Segment.\+hpp} $<$/file$>$
+
+$<$copyright file="{}\+Segment.\+hpp"{} company="{}\+My\+Company.\+com"{}$>$ Copyright (c) 2024 My\+Company.\+com. All rights reserved. $<$/copyright$>$\hypertarget{class_segment_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Declares the segment class. }{Declares the segment class. }}\label{class_segment_autotoc_md12}
+\DoxyHorRuler{0}
+\hypertarget{class_segment_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{class_segment_autotoc_md13}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_segment_a658d7fe435548b9284d76f1d9fb7412e}\label{class_segment_a658d7fe435548b9284d76f1d9fb7412e} 
+\index{Segment@{Segment}!initSegment@{initSegment}}
+\index{initSegment@{initSegment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{initSegment()}{initSegment()}}
+{\footnotesize\ttfamily void Segment\+::init\+Segment (\begin{DoxyParamCaption}\item[{int}]{segp,  }\item[{int}]{srp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the segment class. This, unfortunately can\textquotesingle{}t happen in a constructor. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em segp} & I/O pin number of this segment enable relay \\
+\hline
+{\em srp} & I/O pin number of the set/reset selection relay.\\
+\hline
+\end{DoxyParams}
+
+
+Kemp, 2/8/2024. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segp} & The segp. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_segment_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{
+\begin{DoxyParams}{Parameters}
+\item[{\em srp}]The srp. \end{DoxyParams}
+}{
+\begin{DoxyParams}{Parameters}
+\item[{\em srp}]The srp. \end{DoxyParams}
+}}\label{class_segment_autotoc_md14}
+\Hypertarget{class_segment_a1be8d90d9a00e3f454dbc03d691ff983}\label{class_segment_a1be8d90d9a00e3f454dbc03d691ff983} 
+\index{Segment@{Segment}!reset@{reset}}
+\index{reset@{reset}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Segment\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the segment, that is hide the segment from view. 
+
+\DoxyHorRuler{0}
+\hypertarget{class_segment_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{class_segment_autotoc_md15}
+\Hypertarget{class_segment_a1c0ea973b30734179918fb5b8def47e9}\label{class_segment_a1c0ea973b30734179918fb5b8def47e9} 
+\index{Segment@{Segment}!update@{update}}
+\index{update@{update}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Segment\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{constants_8h_a949f7706a0328024100d2502d52be595}{Segment\+Status}}}]{ss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the segment to the parameter value. If the desired status is the current status, no update is done. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em ss} & The desired status (SHOWN/\+HIDDEN) for the segment.\\
+\hline
+\end{DoxyParams}
+
+
+Kemp, 2/8/2024. \hypertarget{class_segment_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{
+\begin{DoxyParams}{Parameters}
+\item[{\em ss}]The ss. \end{DoxyParams}
+}{
+\begin{DoxyParams}{Parameters}
+\item[{\em ss}]The ss. \end{DoxyParams}
+}}\label{class_segment_autotoc_md16}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Ki\+Cad/7.\+0/projects/\+NCNCA-\/\+Lap-\/\+Counter/software/\+Lap\+Counter/\mbox{\hyperlink{_segment_8hpp}{Segment.\+hpp}}\end{DoxyCompactItemize}

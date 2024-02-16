@@ -1,0 +1,48 @@
+\doxysection{Digit.\+hpp}
+\hypertarget{_digit_8hpp_source}{}\label{_digit_8hpp_source}\index{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/Digit.hpp@{D:/Documents/KiCad/7.0/projects/NCNCA-\/Lap-\/Counter/software/LapCounter/Digit.hpp}}
+\mbox{\hyperlink{_digit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ DIGIT\_HPP}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ DIGIT\_HPP}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_segment_8hpp}{Segment.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_digit}{Digit}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{short}\ digitSelect;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_segment}{Segment}}\ *segments;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{short}\ segCount;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_digit_a6f20a765257bcc7fa60b1090ea770962}{initDigit}}(\textcolor{keywordtype}{short}\ digSel,\mbox{\hyperlink{class_segment}{Segment}}*\ segs,\ \textcolor{keywordtype}{short}\ ct)\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ digitSelect\ =\ digSel;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ segments\ =\ segs;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ segCount\ =\ ct;}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_digit_a3cc33141e223c9b6d401cc4d91f1e559}{reset}}()\ \{\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ digitalWrite(digitSelect,\mbox{\hyperlink{constants_8h_afc572d579aecbc52ec2c3b619993d9d0}{SELECTED}});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ segCount;i++)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ segments[i].\mbox{\hyperlink{class_segment_a1be8d90d9a00e3f454dbc03d691ff983}{reset}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ digitalWrite(digitSelect,\mbox{\hyperlink{constants_8h_a65f3db6ddf94f804187c0773bcdfe2a9}{NOT\_SELECTED}});}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_digit_ac405643b874195c7e2d4d57ceb75f73e}{update}}(\textcolor{keywordtype}{int}\ newValue)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ val\ =\ ((newValue\ ==\ 0)\ \&\&\ (digitSelect\ ==\ \mbox{\hyperlink{constants_8h_ab19bfb85acd1524cad204df9a106f07e}{tensDigitPin}}))?10:newValue;\ \textcolor{comment}{//\ select\ blank\ for\ zero\ if\ tens\ digitalWrite}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ digitalWrite(digitSelect,\mbox{\hyperlink{constants_8h_afc572d579aecbc52ec2c3b619993d9d0}{SELECTED}});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;i\ <\ \mbox{\hyperlink{constants_8h_a15cfe9dd9777e7c6a12c44c6458616dc}{NUMBER\_OF\_SEGMENTS}};\ i++)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ segments[i].\mbox{\hyperlink{class_segment_a1c0ea973b30734179918fb5b8def47e9}{update}}(\mbox{\hyperlink{constants_8h_aba02642ff9731bbe51f9da6d597adaf5}{digitSegments}}[val][i]);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ digitalWrite(digitSelect,\mbox{\hyperlink{constants_8h_a65f3db6ddf94f804187c0773bcdfe2a9}{NOT\_SELECTED}});}
+\DoxyCodeLine{00091\ \ \ \ \ \};}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

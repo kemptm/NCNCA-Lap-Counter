@@ -1,0 +1,122 @@
+\doxysection{Digit Class Reference}
+\hypertarget{class_digit}{}\label{class_digit}\index{Digit@{Digit}}
+
+
+This class represents one digit of the display. It manipulates its seven segments to display digits values.  
+
+
+
+
+{\ttfamily \#include $<$Digit.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_digit_a6f20a765257bcc7fa60b1090ea770962}{init\+Digit}} (short dig\+Sel, \mbox{\hyperlink{class_segment}{Segment}} \texorpdfstring{$\ast$}{*}segs, short ct)
+\begin{DoxyCompactList}\small\item\em Initialize the digit. Can\textquotesingle{}t use a constructor because one of the parameters is an array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digit_a3cc33141e223c9b6d401cc4d91f1e559}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset digit to all blanks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digit_ac405643b874195c7e2d4d57ceb75f73e}{update}} (int new\+Value)
+\begin{DoxyCompactList}\small\item\em Set digit segments to new Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents one digit of the display. It manipulates its seven segments to display digits values. 
+
+\DoxyHorRuler{0}
+ $<$file$>$ D\+:\textbackslash{}\+Documents\textbackslash{}\+Ki\+Cad\textbackslash{}7.\+0\textbackslash{}projects\textbackslash{}\+NCNCA\doxylink{_digit_8hpp}{-\/\+Lap-\/\+Counter\textbackslash{}software\textbackslash{}\+Lap\+Counter\textbackslash{}\+Digit.\+hpp} $<$/file$>$
+
+$<$copyright file="{}\+Digit.\+hpp"{} company="{}\+My\+Company.\+com"{}$>$ Copyright (c) 2024 My\+Company.\+com. All rights reserved. $<$/copyright$>$\hypertarget{class_digit_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Declares the digit class. }{Declares the digit class. }}\label{class_digit_autotoc_md5}
+\DoxyHorRuler{0}
+\hypertarget{class_digit_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{class_digit_autotoc_md6}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_digit_a6f20a765257bcc7fa60b1090ea770962}\label{class_digit_a6f20a765257bcc7fa60b1090ea770962} 
+\index{Digit@{Digit}!initDigit@{initDigit}}
+\index{initDigit@{initDigit}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{initDigit()}{initDigit()}}
+{\footnotesize\ttfamily void Digit\+::init\+Digit (\begin{DoxyParamCaption}\item[{short}]{dig\+Sel,  }\item[{\mbox{\hyperlink{class_segment}{Segment}} \texorpdfstring{$\ast$}{*}}]{segs,  }\item[{short}]{ct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the digit. Can\textquotesingle{}t use a constructor because one of the parameters is an array. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dig\+Sel} & Is this the tens digit or the units digit. This is the pin number of the digits select. \\
+\hline
+{\em segs} & An array of segment objects that this digit will be driving. These will be used to keep the state of the segments. \\
+\hline
+{\em ct} & The size of the segs array.\\
+\hline
+\end{DoxyParams}
+
+
+Kemp, 2/8/2024. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dig\+Sel} & The dig selected. \\
+\hline
+{\em segs} & \mbox{[}in,out\mbox{]} If non-\/null, the segments. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_digit_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{
+\begin{DoxyParams}{Parameters}
+{\em ct} & The ct. \\
+\hline
+\end{DoxyParams}
+}{
+\begin{DoxyParams}{Parameters}
+{\em ct} & The ct. \\
+\hline
+\end{DoxyParams}
+}}\label{class_digit_autotoc_md7}
+\Hypertarget{class_digit_a3cc33141e223c9b6d401cc4d91f1e559}\label{class_digit_a3cc33141e223c9b6d401cc4d91f1e559} 
+\index{Digit@{Digit}!reset@{reset}}
+\index{reset@{reset}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Digit\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset digit to all blanks. 
+
+\DoxyHorRuler{0}
+\hypertarget{class_digit_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Kemp, 2/8/2024. }{Kemp, 2/8/2024. }}\label{class_digit_autotoc_md8}
+\Hypertarget{class_digit_ac405643b874195c7e2d4d57ceb75f73e}\label{class_digit_ac405643b874195c7e2d4d57ceb75f73e} 
+\index{Digit@{Digit}!update@{update}}
+\index{update@{update}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Digit\+::update (\begin{DoxyParamCaption}\item[{int}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set digit segments to new Value. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Integer value (0-\/9) to display.\\
+\hline
+\end{DoxyParams}
+
+
+Kemp, 2/8/2024. \hypertarget{class_digit_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & The new value. \\
+\hline
+\end{DoxyParams}
+}{
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & The new value. \\
+\hline
+\end{DoxyParams}
+}}\label{class_digit_autotoc_md9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Ki\+Cad/7.\+0/projects/\+NCNCA-\/\+Lap-\/\+Counter/software/\+Lap\+Counter/\mbox{\hyperlink{_digit_8hpp}{Digit.\+hpp}}\end{DoxyCompactItemize}
