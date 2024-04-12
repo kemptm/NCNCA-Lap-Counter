@@ -316,13 +316,13 @@ I worked on the Lap Counter today.  I stripped off all of the electronics except
 I need to route out some of the back panel to make the Li-Ion battery fit.  I ordered a router bit for my Dremel, which should be here tomorrow.
 
 
-![The Em,pty Chassis](PXL_20240118_220118669.jpg)
+![The Em,pty Chassis](doc/images/PXL_20240118_220118669.jpg)
 
 #### 1/19/2024
  I routed out the space for the battery.  I made it bigger than it needed to be, but It seems to be OK.  I used a chisel to remove stuff faster than the Dremel was getting it, but that made the bottom rough.  I used the Dremel to smooth it.  Should get some black paint to make it look nice. Next, mount the electronics. Then I can run it.
 
 
-![Battery Holw Routed Out](PXL_20240120_010845676.MP~2.jpg)
+![Battery Holw Routed Out](doc/images/PXL_20240120_010845676.MP~2.jpg)
 
 #### 1/20/2024
 
@@ -393,12 +393,12 @@ All I did today was prep my workspace for soldering the flyback diode board. Sho
 #### 2/15/2024
 
 I painted the case today.  The raw wood, cuts and scratches became black. I also did a bit of assembly for the Flyback Diode Card.
-![[PXL_20240215_231144668.jpg]]
+![](doc/images/PXL_20240215_231144668.jpg)
 
 #### 2/18/2024
 
 I finished mounting the components and soldering the flyback diode board.
-![[PXL_20240219_010652824.jpg]]
+![](doc/images/PXL_20240219_010652824.jpg)
 
 #### 2/19/2024
 
@@ -419,7 +419,7 @@ I started assembling wiring for the buttons.  I found that my back panel is clea
 #### 3/11/2024
 
 I built my first connector today, after a bunch of failed attempts. First of many.
-![[PXL_20240312_001918273.PORTRAIT.jpg]]
+![](doc/images/PXL_20240312_001918273.PORTRAIT.jpg)
 
 #### 3/12/2024
 
@@ -436,7 +436,7 @@ I did more work on wiring.  I mounted two of the connector blocks and then mount
 #### 3/15/2024
 
 I finally installed the toggle relay, battery connector with fuse and the harness to get to the buttons on the back panel.  This is measurable progress.  If I charge the battery, I should be able to turn the system on and off.
-![[PXL_20240316_000836459.jpg]]
+![](doc/images/PXL_20240316_000836459.jpg)
 
 #### 3/18/2024
 
@@ -453,15 +453,15 @@ I spruced up the documentation before sending the URL to Mike.
 #### 3/28/2024
 
 I finalized the locations of the circuit boards.  I'm not crazy about the arrangement as it has a lot of long wires.  I just couldn't make my desired configuration fit.  The wires between the relays don't have enough room.
-![[PXL_20240329_000630082.jpg]]
+![](doc/images/PXL_20240329_000630082.jpg)
 What I'm going to have to do is something like this:
-![[PXL_20240329_000749985.jpg]]
+![](doc/images/PXL_20240329_000749985.jpg)
 It requires longer runs of wires, but there's enough room for the flyback diode board and all the wires to the digits.
 
 #### 3/29/2024
 
 I thought of another layout that I like a whole lot more. Short wires except for the radio.
-![[PXL_20240329_220929935.jpg]]
+![](doc/images/PXL_20240329_220929935.jpg)
 
 #### 4/1/2024
 
@@ -470,27 +470,27 @@ I worked on the 5 volt power system.  With the re-layout, it required some amoun
 #### 4/2/2024
 
 I did a bunch more wiring. The power control circuitry is now all installed. Next, bolt in and power the relays. I have left a gap along the left side for installation of the local control buttons, A, B, C, D.
-![[PXL_20240403_002900285.jpg]]
+![](doc/images/PXL_20240403_002900285.jpg)
 
 #### 4/3/2024
 
 I mounted the segment select relay board and powered the relay ouputs.  I need to power the relays yet. That will come from the two barrier blocks just below the relay.
-![[PXL_20240403_235702629.jpg]]
+![](doc/images/PXL_20240403_235702629.jpg)
 
 #### 4/4/2024
 
 I wired the solenoid power form the segment select relay board to the set-reset relay board and mounted it.
-![[PXL_20240404_231234369.jpg]]
+![](doc/images/PXL_20240404_231234369.jpg)
 
 #### 4/6/2024
 
 I mounted the digit-select terminal block and the Arduino.  The tough part was getting the pins aligned from the Arduino to the relay blocks so that there won't be a strain on the cables.
-![[PXL_20240406_234918092.MP.jpg]]
+![](doc/images/PXL_20240406_234918092.MP.jpg)
 
 #### 4/7/2024
 
 I wired the power to the Arduino and wired the digit select lines between the relay blocks and the terminal strip. I tested the power and most seems well.  The power killing relay seems to have come up picked, but it didn't force a shutdown. its input was open.  I'll have to see what's going on.
-![[PXL_20240407_225614828.jpg]]
+![](doc/images/PXL_20240407_225614828.jpg)
 
 #### 4/10/2024
 
@@ -499,5 +499,5 @@ I wrote most of the key state management software for de-bouncing the keys both 
 #### 4/11/2024
 
 I finished writing and debugging the membrane key device driver software.   It handles both pressing and releasing de-bouncing. Now I'll convert the radio buttons to be members of the same class so that the interface is smooth. i'd rewritten the main loop in LapCounter.ino to use the new interfaces. Here's an image of my test bench. I integrated the new code into the existing LapCounter code.
-![[PXL_20240412_025851559.jpg]]
+![](doc/images/PXL_20240412_025851559.jpg)
 
