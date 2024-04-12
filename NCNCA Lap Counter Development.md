@@ -1,57 +1,53 @@
 Some emails:
 
-From Mike  8/22/2023:
-
+From Mike Hardaway 8/22/2023:
 Hi Tim,
 
 I don’t know if I told you, but it’s my intention, if the lap counter can be made to work, to donate it to NCNCA’s equipment stash, after I build a protective transport case for it.  Between Robert’s crew and some technophobic officials, it will get some rough handling at and between races.  It’s pretty important that it gets protection before being released to general use.
 
-Good luck with the puzzle.
+Good luck with the puzzle. 
 
 Mike
 
-----------------------------------------
+---
 
-To Mike  8/22/2023:
-
+To Mike Hardaway 8/22/2023:
 Hi Mike,
 
-I've taken a first look at it. It doesn't look too complicated. The Arduino drives the relays, which power the segment set and reset solenoids. I need to look inside the Arduino to see if I can get it to barf out the code. The solar panel is controlled by a controller that can charge the batteries. The box can also take power through another interface. I haven't figured out the remote control or what the USB input is for. There are a few broken wires that I don't have any ideas about, yet. I'll have to find power supplies, but I probably have something that will work.
+I've taken a first look at it.  It doesn't look too complicated.  The Arduino drives the relays, which power the segment set and reset solenoids. I need to look inside the Arduino to see if I can get it to barf out the code. The solar panel is controlled by a controller that can charge the batteries.  The box can also take power through another interface.  I haven't figured out the remote control or what the USB input is for. There are a few broken wires that I don't have any ideas about, yet. I'll have to find power supplies, but I probably have something that will work.
+
 I will create a schematic of the thing as I figure it out.  
+
 Before I try to apply any power, I'd like to figure out its current state. Can you remember in what way it is broken? Won't listen to commands? Segment failures on the numbers? Power supply failure? Short? Dead computer?  
 
 Thanks,  
 Tim.
 
-----------------------------------------
+---
 
-From Mike   8/22/2023:
-
+From Mike Hardaway  8/22/2023:
 Hi Tim,
 
-If I remember right, it was accepting a number, then would click down once and freeze.
+If I remember right, it was accepting a number, then would click down once and freeze. 
 
-I think the remote control was for increment, decrement, double zero, and blank.
+I think the remote control was for increment, decrement, double zero, and blank. 
 
 Mike
 
-----------------------------------------
+---
 
-To Mike  8/23/2023:
-
+To Mike Hardaway 8/23/2023:
 Did it ever work completely?
 
 Tim.
 
-----------------------------------------
+---
 
-From Mike  8/23/2023:
+From Mike Hardaway 8/23/2023:
+I’m not exactly sure.  My son called me happily saying it was finished, then a while later called me again saying it had a problem. He flailed at it for a week or so then gave up.
 
-I’m not exactly sure. My son called me happily saying it was finished, then a while later called me again saying it had a problem. He flailed at it for a week or so then gave up.
-
-----------------------------------------
-To Mike  9/4/2023:
-
+------------------
+To Mike Hardaway 9/4/2023:
 Hi Mike,
 
 I haven't been idle on the lap counter.  I've been researching the components to be sure that I could replace one if it seems bad.  The Arduino seems to be a model that was discontinued some time before 2016 (How old is this thing??).  The good news is that the current model is pretty much a one-for-one replacement.  The solar controller, buck converter, relay boards and radio all seem to have equivalent models available today.  The stand out are the numbers themselves.  That technology is so obsolete that I can't even find any references to equipment that works that way. I'll have to measure .
@@ -62,38 +58,52 @@ The investigation goes on.
 
 Tim.
 
-----------------------------------------
-From MIke 9/4/2023:
+---
 
 Hi Tim,
 
-Somehow, I knew you'd be the guy!
+Your diligence is impressive and your analysis of the NCNCA use cycle is inciteful. \[He means insightful] 
 
-My son is an enthusiastic tinkerer but isn't formally educated in electronics.  He was starting to think about current draw when he got diverted to another project and forgot all about this one.
-The arduino came out of his scrap drawer so it may still have some dinosaur blood on it. I bought the numbers in 1991 when there was a really good mail-order (remember that?) deal on them.  They gathered dust for more than 20 years.
+I had questioned the usefulness of the solar cell when my son told me he’d added it.  I think getting rid of it is fine.  
 
-It is encouraging to hear progress being made.
+My memory makes me want to think these are 12v relays.  Is my memory not accurate?  
 
-Mike
+The battery system not only functions as a built-in UPS for the gadget, it also lets us use the counter when we mount it on a scaffold or other high point out of reach of available extension cords.  Furthermore, there are occasionally races at which there isn’t any available utility power or available generator output.  Having a battery power option, even if it’s an external source, can be very desirable. Also, the passive current draw on this gadget is potentially a bit lower than it would be on a counter with actively lit digits. If it’s possible to make the battery work, we should keep it.
+
+An alternative use lifestyle might be for me to maintain the counter, charging it at home between races.  It might not make it to every race but it would be more available than it is now.
+
+Another option is to add a battery holder for a stack of alkaline cells, preparing to replace batteries every few races.  (I have a pretty good idea how well that would(n't) work.)  
+
+If we opt for wired-only operation, the power supply you found looks fine but the ad specifically says it does not have a cooling fan.  Does it require a passive cooling airway?
+
+  
+
+1st  priority is to get the counter increment/decrement function working.
+
+2nd priority is to operate it with its functional wireless remote up/down button.
+
+3rd priority is the battery power option.  
+
+4th priority is the above by the 2024 Early Birds.  
+
+  
+
+Mike. 
 
 #### 8/22/2023
 
 Did some searching on 7 segment displays.  These solenoid-driven displays are totally obsolete.  No one seems to sell them any more.  I'll have to take the box apart to see if they have builder plates on the back.  I'll also need to see how the solenoids are wired.
 
 I did some searching for the remote control of the NCNCA Lap Counter.  It's made by a Chinese company called ??? and sold by a company called SensorBoard. It can be bought on eBay for about $8.25.
-
 #### 8/25/2023
 
 I have spent the last couple of days searching out the major components: Arduino, relay panels, Solar Charge Controller, DC-DC converter, radio remote control, batteries and solar panel.  Many of these parts are obsolete, but very similar things can be found.  The only things that I haven't found anything about are the numbers themselves.  I'll learn more as I work out the schematic.
-
 #### 8/26/2023
 
 I imported and installed [[KiCad]], an electronic CAD program that I intend to use for the NCNCA Lap Counter. It'll take a bit of learning, but it will do things like produce a BOM.  Started the tutorial for it.
-
 #### 8/28/2023
 
 I figured out how to create a new symbol in the [[KiCad]] symbol editor.  I created a model of the DC-DC voltage converter.  A few more symbols and I can start building the schematics for the counter.  I'm beginning to have a suspicion that the reason that this thing would freeze after a bit is that the power supply, in particular the 5V power supply isn't up to changing all of the segments at once.  The design has that the coils are picked for a particular digit and then _all_ of the solenoids are energized.  The 5V power supply is only good for 3 amps.
-
 #### 9/3/2023
 
 I have entered symbols for all of the major components of the NCNCA Lap Counter. I'm ready to start the schematic.  Since I'll Probably scale the pages for 8"x11" paper, I'll have to do a hierarchal drawing.  Perhaps I should use 11"x17" and try to get it all on one page.
@@ -306,13 +316,13 @@ I worked on the Lap Counter today.  I stripped off all of the electronics except
 I need to route out some of the back panel to make the Li-Ion battery fit.  I ordered a router bit for my Dremel, which should be here tomorrow.
 
 
-![The Empty Chassis](doc/images/PXL_20240118_220118669.jpg)
+![The Em,pty Chassis](PXL_20240118_220118669.jpg)
 
 #### 1/19/2024
  I routed out the space for the battery.  I made it bigger than it needed to be, but It seems to be OK.  I used a chisel to remove stuff faster than the Dremel was getting it, but that made the bottom rough.  I used the Dremel to smooth it.  Should get some black paint to make it look nice. Next, mount the electronics. Then I can run it.
 
 
-![Battery Hole Routed Out](doc/images/PXL_20240120_010845676.MP~2.jpg)
+![Battery Holw Routed Out](PXL_20240120_010845676.MP~2.jpg)
 
 #### 1/20/2024
 
@@ -383,12 +393,12 @@ All I did today was prep my workspace for soldering the flyback diode board. Sho
 #### 2/15/2024
 
 I painted the case today.  The raw wood, cuts and scratches became black. I also did a bit of assembly for the Flyback Diode Card.
-![Painted case](doc/images/PXL_20240215_231144668.jpg)
+![[PXL_20240215_231144668.jpg]]
 
 #### 2/18/2024
 
 I finished mounting the components and soldering the flyback diode board.
-![Diode Flyback Board](doc/images/PXL_20240219_010652824.jpg)
+![[PXL_20240219_010652824.jpg]]
 
 #### 2/19/2024
 
@@ -409,7 +419,7 @@ I started assembling wiring for the buttons.  I found that my back panel is clea
 #### 3/11/2024
 
 I built my first connector today, after a bunch of failed attempts. First of many.
-![First Connector](doc/images/PXL_20240312_001918273.PORTRAIT.jpg)
+![[PXL_20240312_001918273.PORTRAIT.jpg]]
 
 #### 3/12/2024
 
@@ -426,11 +436,11 @@ I did more work on wiring.  I mounted two of the connector blocks and then mount
 #### 3/15/2024
 
 I finally installed the toggle relay, battery connector with fuse and the harness to get to the buttons on the back panel.  This is measurable progress.  If I charge the battery, I should be able to turn the system on and off.
-![Toggle Relay installed](doc/images/PXL_20240316_000836459.jpg)
+![[PXL_20240316_000836459.jpg]]
 
 #### 3/18/2024
 
-I soldered the connector onto the hat for the Arduino. I also collected documentation and instructions for the battery charger and the battery. I charged the battery with the charger and all seems well. Tested and works.
+I soldered the connector onto the hat for the Arduino. I also collected documentation and instructions for the battery charger and the battery. I charged the battery with the charger and all seems well.
 
 #### 3/21/2024
 
@@ -443,15 +453,15 @@ I spruced up the documentation before sending the URL to Mike.
 #### 3/28/2024
 
 I finalized the locations of the circuit boards.  I'm not crazy about the arrangement as it has a lot of long wires.  I just couldn't make my desired configuration fit.  The wires between the relays don't have enough room.
-![Test Layout 1](doc/images/PXL_20240329_000630082.jpg)
+![[PXL_20240329_000630082.jpg]]
 What I'm going to have to do is something like this:
-![Test Layout 2](doc/imaes/PXL_20240329_000749985.jpg
+![[PXL_20240329_000749985.jpg]]
 It requires longer runs of wires, but there's enough room for the flyback diode board and all the wires to the digits.
 
 #### 3/29/2024
 
 I thought of another layout that I like a whole lot more. Short wires except for the radio.
-![Test Layout 3](doc/images/PXL_20240329_220929935.jpg)
+![[PXL_20240329_220929935.jpg]]
 
 #### 4/1/2024
 
@@ -460,5 +470,34 @@ I worked on the 5 volt power system.  With the re-layout, it required some amoun
 #### 4/2/2024
 
 I did a bunch more wiring. The power control circuitry is now all installed. Next, bolt in and power the relays. I have left a gap along the left side for installation of the local control buttons, A, B, C, D.
-![Power Wired](doc/images/PXL_20240403_002900285.jpg)
+![[PXL_20240403_002900285.jpg]]
+
+#### 4/3/2024
+
+I mounted the segment select relay board and powered the relay ouputs.  I need to power the relays yet. That will come from the two barrier blocks just below the relay.
+![[PXL_20240403_235702629.jpg]]
+
+#### 4/4/2024
+
+I wired the solenoid power form the segment select relay board to the set-reset relay board and mounted it.
+![[PXL_20240404_231234369.jpg]]
+
+#### 4/6/2024
+
+I mounted the digit-select terminal block and the Arduino.  The tough part was getting the pins aligned from the Arduino to the relay blocks so that there won't be a strain on the cables.
+![[PXL_20240406_234918092.MP.jpg]]
+
+#### 4/7/2024
+
+I wired the power to the Arduino and wired the digit select lines between the relay blocks and the terminal strip. I tested the power and most seems well.  The power killing relay seems to have come up picked, but it didn't force a shutdown. its input was open.  I'll have to see what's going on.
+![[PXL_20240407_225614828.jpg]]
+
+#### 4/10/2024
+
+I wrote most of the key state management software for de-bouncing the keys both membrane and radio.  I'm assembling a test case to work the bugs out.
+
+#### 4/11/2024
+
+I finished writing and debugging the membrane key device driver software.   It handles both pressing and releasing de-bouncing. Now I'll convert the radio buttons to be members of the same class so that the interface is smooth. i'd rewritten the main loop in LapCounter.ino to use the new interfaces. Here's an image of my test bench. I integrated the new code into the existing LapCounter code.
+![[PXL_20240412_025851559.jpg]]
 
