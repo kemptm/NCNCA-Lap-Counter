@@ -11,7 +11,7 @@
 ///-------------------------------------------------------------------------------------------------
 
 #ifndef CONSTANTS_H
-/// <summary>	. </summary>
+/// <summary>	Do not allow inclusion twice. </summary>
 #define CONSTANTS_H
 
 ///-------------------------------------------------------------------------------------------------
@@ -38,25 +38,41 @@
 
 #define NUMBER_OF_RADIO_PINS 5
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	A macro that defines number of buttons. </summary>
+///
+/// <remarks>	Kemp, 4/7/2024. </remarks>
+///-------------------------------------------------------------------------------------------------
+
+#define NUMBER_OF_BUTTONS 9
+  const byte numberButtons = 9;
+  const short buttonPins[numberButtons] = {49, 47, 53, 51, 54, 52, 50, 48, 46};
+  const char buttonNames[numberButtons] = {'1', '2', '3', '4', 'A', 'B', 'C', 'D', 'V'};
+
 /// <summary>	The segment enable pins[ number of segments]. </summary>
 const short segEnablePins[NUMBER_OF_SEGMENTS] = {22, 24, 26, 28, 30, 32, 34};
+
 /// <summary>	The segment set reset pins[ number of segments]. </summary>
 const short segSetResetPins[NUMBER_OF_SEGMENTS] = {23, 25, 27, 29, 31, 33, 35};
-/// <summary>	The radio pins[ number of radio pins]. </summary>
-const short radioPins[NUMBER_OF_RADIO_PINS] = {54, 52, 50, 48, 46};
-// const short digitSelectPins[NUMBER_OF_DIGITS] = {36, 37};
+
 /// <summary>	The tens digit pin. </summary>
 const short tensDigitPin = 36;
+
 /// <summary>	The units digit pin. </summary>
 const short unitsDigitPin = 37;
+
 /// <summary>	The power disable pin. </summary>
 const short powerDisablePin = 55;
+
 /// <summary>	The solenoid delay. </summary>
 const int SOLENOID_DELAY = 100;
+
 /// <summary>	The selected. </summary>
 const int SELECTED = LOW;
+
 /// <summary>	The not selected. </summary>
 const int NOT_SELECTED = HIGH;
+
 /// <summary>	two hours. </summary>
 const unsigned long TIMEOUT_MILLISECONDS = 7200000;
 
@@ -72,16 +88,25 @@ enum class SegmentStatus
     SHOWN,
 };
 
-/// <summary>	The button a. </summary>
-const short BUTTON_A = 0;
-/// <summary>	The button b. </summary>
-const short BUTTON_B = 1;
-/// <summary>	The button c. </summary>
-const short BUTTON_C = 2;
-/// <summary>	The button d. </summary>
-const short BUTTON_D = 3;
-/// <summary>	The button vt. </summary>
-const short BUTTON_VT = 4;
+/// <summary>	The radio button a. </summary>
+#define LOCAL_1 0
+/// <summary>	The radio button a. </summary>
+#define LOCAL_2 1
+/// <summary>	The radio button a. </summary>
+#define LOCAL_3 2
+/// <summary>	The radio button a. </summary>
+#define LOCAL_4 3
+/// <summary>	The radio button a. </summary>
+#define RADIO_A 4
+/// <summary>	The radio button b. </summary>
+#define RADIO_B 5
+/// <summary>	The radio button c. </summary>
+#define RADIO_C 6
+/// <summary>	The radio button d. </summary>
+#define RADIO_D 7
+/// <summary>	The radio button vt. </summary>
+#define RADIO_VT 8
+/// <summary>   The button 1 (A)
 
 /// <summary>	The digit segments[ 11][ number of segments]. </summary>
 const SegmentStatus digitSegments[11][NUMBER_OF_SEGMENTS] =

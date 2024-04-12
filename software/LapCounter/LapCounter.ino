@@ -1,7 +1,7 @@
 ///-------------------------------------------------------------------------------------------------
 /// <file>	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\LapCounter.ino </file>
 ///
-/// <copyright file="Digit.hpp" company="TMKempEngineering.com">
+/// <copyright file="LapCounter.ino" company="TMKempEngineering.com">
 /// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
 /// </copyright>
 ///
@@ -10,6 +10,7 @@
 #include "constants.h"
 #include "Segment.hpp"
 #include "Digit.hpp"
+#include "Key.hpp"
 
 /// <summary>	The units segments[ number of segments]. </summary>
 Segment unitsSegments[NUMBER_OF_SEGMENTS];
@@ -28,10 +29,9 @@ unsigned short tens;
 /// <summary>	The units. </summary>
 unsigned short units;
 
-/// <summary>	The current radio pin state[ number of radio pins]. </summary>
-short currentRadioPinState[NUMBER_OF_RADIO_PINS] = {LOW, LOW, LOW, LOW, LOW};
-/// <summary>	The last radio pin state[ number of radio pins]. </summary>
-short lastRadioPinState[NUMBER_OF_RADIO_PINS] = {LOW, LOW, LOW, LOW, LOW};
+/// <summary>   Define the buttons, both membrane and radio. </summary>
+  Key buttons[numberButtons];
+
 
 ///-------------------------------------------------------------------------------------------------
 /// <summary>
@@ -42,7 +42,12 @@ short lastRadioPinState[NUMBER_OF_RADIO_PINS] = {LOW, LOW, LOW, LOW, LOW};
 ///-------------------------------------------------------------------------------------------------
 
 void setup()
-{
+{    
+    /// Define the onboard LED and shut it off.
+    pinMode(LED_BUILTIN,OUTPUT);
+    digitalWrite(LED_BUILTIN,LOW);
+
+
     /// Define the pins for selecting a segment and deciding whether to set or reset
     for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
     {
@@ -58,14 +63,22 @@ void setup()
     unitsDigit.initDigit(unitsDigitPin, unitsSegments, NUMBER_OF_SEGMENTS);
     pinMode(unitsDigitPin, OUTPUT);
 
-    // Define the input pins for the radio remote control
-    for (int i; i < NUMBER_OF_RADIO_PINS; i++)
-    {
-        pinMode(radioPins[i], INPUT);
-    };
+    // Define the input pins for the radio remote control and local buttons
+    // local buttons
+    for (int i = 0; i < 4; i++) {
+        buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
+        pinMode(buttons[i].pin,INPUT_PULLUP);
+    }
+
+    // Radio buttons
+    for (int i = 4; i < numberButtons; i++) {
+        buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
+        pinMode(buttons[i].pin,INPUT);
+    }
 
     // Define the output pin for disconnecting the power
     pinMode(powerDisablePin, OUTPUT);
+    digitalWrite(powerDisablePin,LOW);
 
     lastTime = 0;
     tens = 0;
@@ -80,7 +93,10 @@ void setup()
     tensDigit.reset();
     unitsDigit.reset();
 
+    // Signal that we are up and ready
     Serial.println("Initialized");
+    digitalWrite(13,HIGH);
+
 };
 
 ///-------------------------------------------------------------------------------------------------
@@ -108,16 +124,16 @@ void loop()
     }                                       // doesn't make it out of here
     else
     {
-        // Read the button pins from the receiver
-        for (int i = 0; i < NUMBER_OF_RADIO_PINS; i++)
-        {
-            currentRadioPinState[i] = (radioPins[i]);
+        // read the keys
+        for (int i = 0; i < numberButtons; i++){
+            buttons[i].updateKey();
         }
 
-        // If A button has gone high (different from last read) process it
-        if ((currentRadioPinState[BUTTON_A] == HIGH) && (lastRadioPinState[BUTTON_A] == LOW))
+        // If A button or 1 button has gone high (different from last read) process it
+        if ((buttons[RADIO_A].getKeyState() == HOLD) && (buttons[RADIO_A].getStateChanged())
+            || ((buttons[LOCAL_1].getKeyState() == HOLD) && (buttons[LOCAL_1].getStateChanged())))
         {
-            /// Button A "Above" means increment (select the next above of) the units digit by one. If it
+            /// Button A "Above" (and button 1) means increment (select the next above of) the units digit by one. If it
             /// increments from 9, then increment the tens digit by one. You can increment the 10s digit back to zero
             /// from 99.
 
@@ -133,10 +149,11 @@ void loop()
 
             lastTime = currentTime;
         };
-        // If B button has gone high (different from last read) process it
-        if ((currentRadioPinState[BUTTON_B] == HIGH) && (lastRadioPinState[BUTTON_B] == LOW))
+        // If B button or 2 button has gone high (different from last read) process it
+        if ((buttons[RADIO_B].getKeyState() == HOLD) && (buttons[RADIO_B].getStateChanged())
+            || ((buttons[LOCAL_2].getKeyState() == HOLD) && (buttons[LOCAL_2].getStateChanged())))
         {
-            /// Button B "Below" means decrement (select the next below of) the units digit by one. If it
+            /// Button B "Below" (and button 2) means decrement (select the next below of) the units digit by one. If it
             /// decrements from zero, it will be replaced with 9 and the tens digit will decrement by one. The tens
             /// digit will not decrement from zero.
 
@@ -155,8 +172,9 @@ void loop()
 
             lastTime = currentTime;
         };
-        // If C button has gone high (different from last read) process it
-        if ((currentRadioPinState[BUTTON_C] == HIGH) && (lastRadioPinState[BUTTON_C] == LOW))
+        // If C button or 3 button has gone high (different from last read) process it
+        if ((buttons[RADIO_C].getKeyState() == HOLD) && (buttons[RADIO_C].getStateChanged())
+            || ((buttons[LOCAL_3].getKeyState() == HOLD) && (buttons[LOCAL_3].getStateChanged())))
         {
             /// Reset "Clear" means set all segments to their HIDDEN state.
             tensDigit.reset();
@@ -167,8 +185,9 @@ void loop()
 
             lastTime = currentTime;
         };
-        // If D button has gone high (different from last read) process it
-        if ((currentRadioPinState[BUTTON_D] == HIGH) && (lastRadioPinState[BUTTON_D] == LOW))
+        // If D button or 4 button has gone high (different from last read) process it
+        if ((buttons[RADIO_D].getKeyState() == HOLD) && (buttons[RADIO_D].getStateChanged())
+            || ((buttons[LOCAL_4].getKeyState() == HOLD) && (buttons[LOCAL_4].getStateChanged())))
         {
             /// Multiply the number by ten, "Decimal".  That is the units digit value will replace the tens
             /// digit value. The tens digit value is lost. The units digit becomes 0.
@@ -181,10 +200,5 @@ void loop()
 
             lastTime = currentTime;
         };
-
-        for (int i = 0; i < NUMBER_OF_RADIO_PINS; i++) // move current pin state to last pin state
-        {
-            lastRadioPinState[i] = currentRadioPinState[i];
-        }
     };
 }
