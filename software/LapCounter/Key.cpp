@@ -1,8 +1,7 @@
 #ifndef KEY_CPP
 #define KEY_CPP 1
 #include <Arduino.h>
-#include "Key.h"
-
+#include "Key.hpp"
 
 // default constructor
 Key::Key() {

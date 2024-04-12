@@ -1,7 +1,7 @@
 ///-------------------------------------------------------------------------------------------------
 /// <file>	D:\Documents\KiCad\7.0\projects\NCNCA-Lap-Counter\software\LapCounter\LapCounter.ino </file>
 ///
-/// <copyright file="Digit.hpp" company="TMKempEngineering.com">
+/// <copyright file="LapCounter.ino" company="TMKempEngineering.com">
 /// 	Copyright (c) 2024 TMKempEngineering.com. All rights reserved.
 /// </copyright>
 ///
@@ -10,7 +10,7 @@
 #include "constants.h"
 #include "Segment.hpp"
 #include "Digit.hpp"
-#include "Key.h"
+#include "Key.hpp"
 
 /// <summary>	The units segments[ number of segments]. </summary>
 Segment unitsSegments[NUMBER_OF_SEGMENTS];

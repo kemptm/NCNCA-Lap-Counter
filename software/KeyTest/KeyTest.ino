@@ -2,7 +2,7 @@
   
 */
 #include <Arduino.h>
-#include "Key.h"
+#include "Key.hpp"
   const byte numberButtons = 4;
   const short buttonPins[numberButtons] = {49, 47, 53, 51};
   const char buttonNames[numberButtons] = {'1', '2', '3', '4'};
