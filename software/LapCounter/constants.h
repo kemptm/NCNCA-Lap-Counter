@@ -46,14 +46,14 @@
 
 #define NUMBER_OF_BUTTONS 9
   const byte numberButtons = 9;
-  const short buttonPins[numberButtons] = {49, 47, 53, 51, 54, 52, 50, 48, 46};
+  const short buttonPins[numberButtons] = { 49,  47,  53,  51,  54,  52,  50,  48,  46};
   const char buttonNames[numberButtons] = {'1', '2', '3', '4', 'A', 'B', 'C', 'D', 'V'};
 
 /// <summary>	The segment enable pins[ number of segments]. </summary>
-const short segEnablePins[NUMBER_OF_SEGMENTS] = {22, 24, 26, 28, 30, 32, 34};
+const short segEnablePins[NUMBER_OF_SEGMENTS] = {23, 25, 27, 29, 31, 33, 35};
 
 /// <summary>	The segment set reset pins[ number of segments]. </summary>
-const short segSetResetPins[NUMBER_OF_SEGMENTS] = {23, 25, 27, 29, 31, 33, 35};
+const short segSetResetPins[NUMBER_OF_SEGMENTS] = {22, 24, 26, 28, 30, 32, 34};
 
 /// <summary>	The tens digit pin. </summary>
 const short tensDigitPin = 36;
@@ -62,7 +62,7 @@ const short tensDigitPin = 36;
 const short unitsDigitPin = 37;
 
 /// <summary>	The power disable pin. </summary>
-const short powerDisablePin = 55;
+const short powerDisablePin = 56;
 
 /// <summary>	The solenoid delay. </summary>
 const int SOLENOID_DELAY = 100;
@@ -146,5 +146,10 @@ const SegmentStatus digitSegments[11][NUMBER_OF_SEGMENTS] =
         },
 
 };
+
+/// define a macro for logging digital pin state
+#define PRINT_PIN(pin) \
+Serial.print(pin); \
+Serial.println(digitalRead(pin)==HIGH?" HIGH":" LOW"); \
 
 #endif

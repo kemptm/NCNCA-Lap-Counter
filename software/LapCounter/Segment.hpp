@@ -60,11 +60,11 @@ public:
 
     void reset()
     {
-        digitalWrite(setResetPin, HIGH);
-        digitalWrite(segmentPin, SELECTED);
+        digitalWrite(setResetPin, HIGH); PRINT_PIN(setResetPin)
+        digitalWrite(segmentPin, SELECTED); PRINT_PIN(segmentPin)
         delay(SOLENOID_DELAY);
-        digitalWrite(segmentPin, NOT_SELECTED);
-        digitalWrite(setResetPin, HIGH);
+        digitalWrite(segmentPin, NOT_SELECTED); PRINT_PIN(segmentPin)
+        // digitalWrite(setResetPin, HIGH);PRINT_PIN(setResetPin) unnecessary
 
         status = SegmentStatus::HIDDEN;
     };
@@ -85,11 +85,11 @@ public:
     {
         if (ss != status)
         {
-            digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW);
-            digitalWrite(segmentPin, SELECTED);
+            digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW); PRINT_PIN(setResetPin)
+            digitalWrite(segmentPin, SELECTED);  PRINT_PIN(segmentPin)
             delay(SOLENOID_DELAY);
-            digitalWrite(segmentPin, NOT_SELECTED);
-            digitalWrite(setResetPin, HIGH);
+            digitalWrite(segmentPin, NOT_SELECTED);  PRINT_PIN(segmentPin)
+            digitalWrite(setResetPin, HIGH); PRINT_PIN(setResetPin)
 
             status = ss;
         }
