@@ -501,3 +501,52 @@ I wrote most of the key state management software for de-bouncing the keys both 
 I finished writing and debugging the membrane key device driver software.   It handles both pressing and releasing de-bouncing. Now I'll convert the radio buttons to be members of the same class so that the interface is smooth. i'd rewritten the main loop in LapCounter.ino to use the new interfaces. Here's an image of my test bench. I integrated the new code into the existing LapCounter code.
 ![](doc/images/PXL_20240412_025851559.jpg)
 
+#### 4/12/2024
+
+I got the local buttons fully working and pushed the code. I wanted to clean up the compiler include path, but I couldn't manage to make it work with the includes anywhere but in the same directory as the main compilation unit.  I also cleaned up the Development Log and pushed that.
+
+#### 4/13/2024
+
+Having the buttons working, I added a bunch of debug print lines to the LapCounter.ino file. And ran it.  I had to do a little hack to make the non-existent radio buttons quiet.  After that, with just a few tweaks, increment and decrement seem to be working.  I haven't made a complete test, by any means, but this is exciting.
+
+#### 4/14/2024
+
+I did some more research on the matter of include files.  It is apparently a fact that the Arduino compiler looks only in the current folder for local includes.  I can have them elsewhere if I build a library and identify that library to the compiler.  I won't bother for now.
+
+I mounted the local keypad and preliminarily routed the cables.
+![New key pad](doc/images/PXL_20240414_222815417.jpg)
+
+#### 04/16/2024
+
+Today I connected the local buttons to the Arduino with a temporary cable and then loaded and tested the LapCounter program. All good so far. I started wiring the Flyback Diode Board.  I'm leaving the lengths of the wires alone, for now, merely trimming bad ends off.  I decided to wire the board before mounting it, as it's easier to get the wires in with the board tilted towards me.  After I get all of the red and orange wires going to the solenoids in, I'll mount the board and run the wires from the relay board. I also started to wire the final path to ground for the solenoids.  I put a pull-up on the timeout relay so that it won't react until I am ready to test it.
+![Paritally wired Flyback Board](doc/images/PXL_20240416_222703595.jpg "The Chassis")
+
+#### 04/17/2024
+
+Today I was busy trying and failing to make ribbon cables.  The ribbon cables are a very fine wire and not tinned. The nature of the things tied together means that I have to be perfect on putting the connectors on.  If I fail on one connector, the whole thing is junk.  I decided to make the main signal cables out of single wires and then bind them into a harness with cable ties.  That way, if I fail on one wire, that's the only one I fail on. So, not much progress, but I have added understanding.
+
+#### 04/18/2024
+
+I continued to build the cables. I'm building the short cable from the Arduino to the set/reset select relay.  The cable is 4" long.  A very slight difference in the wire lengths is a significant problem about making the cable work.  The short wires will always be tight.  I have built 6 of the 9 wires required. Two of them may be too short. I have over 3 hours in this cable, so far.
+
+#### 04/19/2024
+
+I just had a thought about making short cables.  Start out by cutting them all the same length. put the connectors in one end and then into the connector shell.  bundle the harness and then cut the other end so that they are all flush the same.  That way they'll go into the connector shell evenly. For Cable 2, I won't harness them, but leave them loose. I probably won't bother for Cable 3 either. BTW, the cables are:
+
+| Cable No | Use |
+| :--------: | --- |
+|1|Arduino to Segment Select Relay Board|
+|2|Arduino to Set/Reset Select Relay Board|
+|3|Arduino to Local Membrane Buttons|
+|4|Arduino to Radio Module and Power Down Relay|
+|5|Toggle Relay to Power Buttons|
+
+I intend to label them and provide photos for how they are supposed to be installed.
+
+I finished and wrung out my first big cable.
+![Cable 2](doc/images/PXL_20240419_230446970.jpg)
+
+It's cable 2.  It goes from the Arduino to the Set/Reset Relay Board.
+![Cable 2 in place](doc/images/PXL_20240419_231935977.jpg)
+
+This took me over 4 hours to make.  I ran into a bunch of problems: stripping wire, getting the lengths correct, the shortness of the bundle.  At least, if I screwed up a wire, I just threw it away and started another.  I didn't have to remake the whole cable. Note that I used wide connector bodies rather than individual ones.  The wide connecter bodies make the connections stay on better as the gripping force of the connector is multiplied by the number of wires bound together.
