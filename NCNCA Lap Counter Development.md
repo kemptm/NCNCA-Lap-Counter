@@ -47,6 +47,7 @@ From Mike Hardaway 8/23/2023:
 I’m not exactly sure.  My son called me happily saying it was finished, then a while later called me again saying it had a problem. He flailed at it for a week or so then gave up.
 
 ------------------
+
 To Mike Hardaway 9/4/2023:
 Hi Mike,
 
@@ -76,8 +77,6 @@ Another option is to add a battery holder for a stack of alkaline cells, prepari
 
 If we opt for wired-only operation, the power supply you found looks fine but the ad specifically says it does not have a cooling fan.  Does it require a passive cooling airway?
 
-  
-
 1st  priority is to get the counter increment/decrement function working.
 
 2nd priority is to operate it with its functional wireless remote up/down button.
@@ -86,24 +85,26 @@ If we opt for wired-only operation, the power supply you found looks fine but th
 
 4th priority is the above by the 2024 Early Birds.  
 
-  
-
-Mike. 
+Mike.
 
 #### 8/22/2023
 
 Did some searching on 7 segment displays.  These solenoid-driven displays are totally obsolete.  No one seems to sell them any more.  I'll have to take the box apart to see if they have builder plates on the back.  I'll also need to see how the solenoids are wired.
 
 I did some searching for the remote control of the NCNCA Lap Counter.  It's made by a Chinese company called ??? and sold by a company called SensorBoard. It can be bought on eBay for about $8.25.
+
 #### 8/25/2023
 
 I have spent the last couple of days searching out the major components: Arduino, relay panels, Solar Charge Controller, DC-DC converter, radio remote control, batteries and solar panel.  Many of these parts are obsolete, but very similar things can be found.  The only things that I haven't found anything about are the numbers themselves.  I'll learn more as I work out the schematic.
+
 #### 8/26/2023
 
 I imported and installed [[KiCad]], an electronic CAD program that I intend to use for the NCNCA Lap Counter. It'll take a bit of learning, but it will do things like produce a BOM.  Started the tutorial for it.
+
 #### 8/28/2023
 
 I figured out how to create a new symbol in the [[KiCad]] symbol editor.  I created a model of the DC-DC voltage converter.  A few more symbols and I can start building the schematics for the counter.  I'm beginning to have a suspicion that the reason that this thing would freeze after a bit is that the power supply, in particular the 5V power supply isn't up to changing all of the segments at once.  The design has that the coils are picked for a particular digit and then _all_ of the solenoids are energized.  The 5V power supply is only good for 3 amps.
+
 #### 9/3/2023
 
 I have entered symbols for all of the major components of the NCNCA Lap Counter. I'm ready to start the schematic.  Since I'll Probably scale the pages for 8"x11" paper, I'll have to do a hierarchal drawing.  Perhaps I should use 11"x17" and try to get it all on one page.
@@ -315,14 +316,13 @@ I worked on the Lap Counter today.  I stripped off all of the electronics except
 
 I need to route out some of the back panel to make the Li-Ion battery fit.  I ordered a router bit for my Dremel, which should be here tomorrow.
 
-
-![The Em,pty Chassis](doc/images/PXL_20240118_220118669.jpg)
+![The Empty Chassis](doc/images/PXL_20240118_220118669.jpg)
 
 #### 1/19/2024
+
  I routed out the space for the battery.  I made it bigger than it needed to be, but It seems to be OK.  I used a chisel to remove stuff faster than the Dremel was getting it, but that made the bottom rough.  I used the Dremel to smooth it.  Should get some black paint to make it look nice. Next, mount the electronics. Then I can run it.
 
-
-![Battery Holw Routed Out](doc/images/PXL_20240120_010845676.MP~2.jpg)
+![Battery Hole Routed Out](doc/images/PXL_20240120_010845676.MP~2.jpg)
 
 #### 1/20/2024
 
@@ -393,12 +393,12 @@ All I did today was prep my workspace for soldering the flyback diode board. Sho
 #### 2/15/2024
 
 I painted the case today.  The raw wood, cuts and scratches became black. I also did a bit of assembly for the Flyback Diode Card.
-![](doc/images/PXL_20240215_231144668.jpg)
+![Case painted](doc/images/PXL_20240215_231144668.jpg)
 
 #### 2/18/2024
 
 I finished mounting the components and soldering the flyback diode board.
-![](doc/images/PXL_20240219_010652824.jpg)
+![Flyback Diode Board](doc/images/PXL_20240219_010652824.jpg)
 
 #### 2/19/2024
 
@@ -419,7 +419,7 @@ I started assembling wiring for the buttons.  I found that my back panel is clea
 #### 3/11/2024
 
 I built my first connector today, after a bunch of failed attempts. First of many.
-![](doc/images/PXL_20240312_001918273.PORTRAIT.jpg)
+![First connector](doc/images/PXL_20240312_001918273.PORTRAIT.jpg)
 
 #### 3/12/2024
 
@@ -436,7 +436,7 @@ I did more work on wiring.  I mounted two of the connector blocks and then mount
 #### 3/15/2024
 
 I finally installed the toggle relay, battery connector with fuse and the harness to get to the buttons on the back panel.  This is measurable progress.  If I charge the battery, I should be able to turn the system on and off.
-![](doc/images/PXL_20240316_000836459.jpg)
+![Toggle installed](doc/images/PXL_20240316_000836459.jpg)
 
 #### 3/18/2024
 
@@ -453,15 +453,15 @@ I spruced up the documentation before sending the URL to Mike.
 #### 3/28/2024
 
 I finalized the locations of the circuit boards.  I'm not crazy about the arrangement as it has a lot of long wires.  I just couldn't make my desired configuration fit.  The wires between the relays don't have enough room.
-![](doc/images/PXL_20240329_000630082.jpg)
+![Proposed layout](doc/images/PXL_20240329_000630082.jpg)
 What I'm going to have to do is something like this:
-![](doc/images/PXL_20240329_000749985.jpg)
+![Another try](doc/images/PXL_20240329_000749985.jpg)
 It requires longer runs of wires, but there's enough room for the flyback diode board and all the wires to the digits.
 
 #### 3/29/2024
 
 I thought of another layout that I like a whole lot more. Short wires except for the radio.
-![](doc/images/PXL_20240329_220929935.jpg)
+![Final layout](doc/images/PXL_20240329_220929935.jpg)
 
 #### 4/1/2024
 
@@ -470,27 +470,27 @@ I worked on the 5 volt power system.  With the re-layout, it required some amoun
 #### 4/2/2024
 
 I did a bunch more wiring. The power control circuitry is now all installed. Next, bolt in and power the relays. I have left a gap along the left side for installation of the local control buttons, A, B, C, D.
-![](doc/images/PXL_20240403_002900285.jpg)
+![Next the relays](doc/images/PXL_20240403_002900285.jpg)
 
 #### 4/3/2024
 
 I mounted the segment select relay board and powered the relay ouputs.  I need to power the relays yet. That will come from the two barrier blocks just below the relay.
-![](doc/images/PXL_20240403_235702629.jpg)
+![First relay board mounted](doc/images/PXL_20240403_235702629.jpg)
 
 #### 4/4/2024
 
-I wired the solenoid power form the segment select relay board to the set-reset relay board and mounted it.
-![](doc/images/PXL_20240404_231234369.jpg)
+I wired the solenoid power from the segment select relay board to the set-reset relay board and mounted it.
+![More Relay wires](doc/images/PXL_20240404_231234369.jpg)
 
 #### 4/6/2024
 
 I mounted the digit-select terminal block and the Arduino.  The tough part was getting the pins aligned from the Arduino to the relay blocks so that there won't be a strain on the cables.
-![](doc/images/PXL_20240406_234918092.MP.jpg)
+![First relay wired](doc/images/PXL_20240406_234918092.MP.jpg)
 
 #### 4/7/2024
 
 I wired the power to the Arduino and wired the digit select lines between the relay blocks and the terminal strip. I tested the power and most seems well.  The power killing relay seems to have come up picked, but it didn't force a shutdown. its input was open.  I'll have to see what's going on.
-![](doc/images/PXL_20240407_225614828.jpg)
+![Relays wired](doc/images/PXL_20240407_225614828.jpg)
 
 #### 4/10/2024
 
@@ -499,7 +499,7 @@ I wrote most of the key state management software for de-bouncing the keys both 
 #### 4/11/2024
 
 I finished writing and debugging the membrane key device driver software.   It handles both pressing and releasing de-bouncing. Now I'll convert the radio buttons to be members of the same class so that the interface is smooth. i'd rewritten the main loop in LapCounter.ino to use the new interfaces. Here's an image of my test bench. I integrated the new code into the existing LapCounter code.
-![](doc/images/PXL_20240412_025851559.jpg)
+![Program running](doc/images/PXL_20240412_025851559.jpg)
 
 #### 4/12/2024
 
@@ -550,3 +550,10 @@ It's cable 2.  It goes from the Arduino to the Set/Reset Relay Board.
 ![Cable 2 in place](doc/images/PXL_20240419_231935977.jpg)
 
 This took me over 4 hours to make.  I ran into a bunch of problems: stripping wire, getting the lengths correct, the shortness of the bundle.  At least, if I screwed up a wire, I just threw it away and started another.  I didn't have to remake the whole cable. Note that I used wide connector bodies rather than individual ones.  The wide connecter bodies make the connections stay on better as the gripping force of the connector is multiplied by the number of wires bound together.
+
+I just noticed that the Digit Select Relays are wired wrong. The wiring should go from the segment grounds to the Flyback Board and then to the Digit Select relay. I need to correct that.
+
+#### 4/21/2024
+
+The electronics are all mounted!  Just wiring from here.
+![All Electronics Mounted](doc/images/PXL_20240421_214329725.jpg)
