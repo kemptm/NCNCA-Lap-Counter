@@ -56,14 +56,24 @@ void setup()
         unitsSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
         tensSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
 
-        pinMode(segEnablePins[i], OUTPUT);
+        pinMode(segEnablePins[i], OUTPUT);    
+        digitalWrite(segEnablePins[i],HIGH);
+        PRINT_PIN(segEnablePins[i])
+
         pinMode(segSetResetPins[i], OUTPUT);
+        digitalWrite(segSetResetPins[i],HIGH);
+        PRINT_PIN(segSetResetPins[i])
     };
     /// Define the digits
     tensDigit.initDigit(tensDigitPin, tensSegments, NUMBER_OF_SEGMENTS);
     pinMode(tensDigitPin, OUTPUT);
+    digitalWrite(tensDigitPin,HIGH);
+    PRINT_PIN(tensDigitPin)
+
     unitsDigit.initDigit(unitsDigitPin, unitsSegments, NUMBER_OF_SEGMENTS);
     pinMode(unitsDigitPin, OUTPUT);
+    digitalWrite(unitsDigitPin,HIGH);
+    PRINT_PIN(unitsDigitPin)
 
     /// Define the input pins for the radio remote control and local buttons
     /// local buttons
@@ -76,7 +86,8 @@ void setup()
     for (int i = 4; i < numberButtons; i++) {
         //buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
         //pinMode(buttons[i].pin,INPUT);
-        // quick hack to disable radio keys
+        // quick hack to disable radio keys -- make them INPUT_PULLUP instead of INPUT as they 
+        // will be when connected.
         buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
         pinMode(buttons[i].pin,INPUT_PULLUP);
     }
@@ -93,6 +104,11 @@ void setup()
 
     // Power On Self test
     Serial.println("POST");
+    digitalWrite(LED_BUILTIN,HIGH);
+    PRINT_PIN(LED_BUILTIN)
+
+    tensDigit.reset();
+    unitsDigit.reset();
     unitsDigit.update(8);
     tensDigit.update(8);
     delay(3000);
@@ -101,7 +117,8 @@ void setup()
 
     // Signal that we are up and ready
     Serial.println("Initialized");
-    // digitalWrite(LED_BUILTIN,HIGH); PRINT_PIN(LED_BUILTIN)
+    digitalWrite(LED_BUILTIN,LOW);
+    PRINT_PIN(LED_BUILTIN)
 
 };
 
