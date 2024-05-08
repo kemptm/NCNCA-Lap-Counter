@@ -599,3 +599,18 @@ I powered up the whole thing.  It didn't work. Now I get into debugging.  I resu
 Just a thought. I should probably explicitly jump the ground systems of the 12v powered devices and the 5v powered devices. That solved the problem. I made it work, through POST.  The POST routine sets the display to '88', waits 3 seconds and then resets everything.  Here's a movie:
 
 <video src="doc/images/PXL_20240430_235422093.mp4" width="640"  controls></video>
+
+## 5/1/2024
+
+I added the wires from the Segment Select Relay to the Flyback Diode Board. I tested the connections with my  VOM. It's weird, everything seems to be shorted together.  I'm not sure what do to.  The VOM could be confused by the coils of the display, but I'm not sure.  Gotta think on this one.
+
+## 5/2/2024
+
+I have a thought that the circuits on the lap counter may be fine, rather than shorted out. I should disconnect the 12V power from the relays and test the circuit from there.  I think that feedback through the power supplies might have been confusing the VOM. What I want to see is no clear path to ground from the power supplies when the relays are not activated.
+
+
+## 5/3/2024
+
+I powered the whole thing up today. The POST ran fine, though one segment, "F" on the 10's digit seems reluctant to reset properly. It mechanically is OK. It might not be getting enough current due to bad connections or my other little problem. That is that the two digits take all of the signals whether or not the digit select relay is picked for that digit.  Somehow, the grounds of the digits are connected.  I'm going to have to wring that out.  Anyway, here's a movie of the first time the segments moved:
+
+<video src="doc/images/PXL_20240503_232853053.mp4" width="640"  controls></video>

@@ -1,0 +1,907 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "eb053595-27b0-4f0b-a608-1cb5221a2342")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Diode:1N4007"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4007"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?41*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4007_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4007_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 161.29 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a760481-9736-46f9-9a2a-b0731f28b650")
+	)
+	(junction
+		(at 144.78 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d79f3488-6210-4c89-9272-8661fe55ae9b")
+	)
+	(junction
+		(at 125.73 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd77c08f-180a-4d9a-a72d-21e627b06025")
+	)
+	(wire
+		(pts
+			(xy 144.78 63.5) (xy 171.45 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b14eb00-34a3-4518-acb9-7bb541121585")
+	)
+	(wire
+		(pts
+			(xy 144.78 63.5) (xy 144.78 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dabecd6-549e-44f7-bd9b-50845c41e3e5")
+	)
+	(wire
+		(pts
+			(xy 125.73 63.5) (xy 125.73 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2175a7d6-7f1d-4b4c-8646-a2cfffa3fb08")
+	)
+	(wire
+		(pts
+			(xy 135.89 63.5) (xy 144.78 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "243fa5e9-3bd8-4ef8-85db-065e85a89b14")
+	)
+	(wire
+		(pts
+			(xy 135.89 73.66) (xy 161.29 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39b90d19-3777-4d77-92bc-ff56636cbc05")
+	)
+	(wire
+		(pts
+			(xy 161.29 73.66) (xy 171.45 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5621aa5f-95c8-4675-8519-68d22c91f187")
+	)
+	(wire
+		(pts
+			(xy 106.68 63.5) (xy 125.73 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "629ac4ce-fde2-4223-88a1-0293ec7f04cc")
+	)
+	(wire
+		(pts
+			(xy 125.73 63.5) (xy 128.27 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "856fce38-9f9a-460a-b482-18b50d1676ac")
+	)
+	(wire
+		(pts
+			(xy 125.73 73.66) (xy 128.27 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b9a3a2f-7d4b-4671-9a95-7b7130c072b6")
+	)
+	(wire
+		(pts
+			(xy 161.29 73.66) (xy 161.29 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2f0726f-a757-4b39-86cf-c7fe88249a39")
+	)
+	(hierarchical_label "TC"
+		(shape input)
+		(at 161.29 83.82 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "180c94c3-35ab-40af-a5d1-3409e0beaaf9")
+	)
+	(hierarchical_label "UC"
+		(shape input)
+		(at 144.78 83.82 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a40b5fc1-a089-4d5c-b660-6069eb619619")
+	)
+	(hierarchical_label "Select"
+		(shape input)
+		(at 106.68 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be716b6d-a6b3-4dba-b379-2b549087b67f")
+	)
+	(hierarchical_label "Units_Out"
+		(shape input)
+		(at 171.45 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c40f5688-950b-451f-980a-f68d333438e5")
+	)
+	(hierarchical_label "Tens_Out"
+		(shape input)
+		(at 171.45 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fa7ff19c-3113-424b-a97a-15237c72841d")
+	)
+	(symbol
+		(lib_id "Diode:1N4007")
+		(at 132.08 63.5 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36ec98c0-56ab-400d-a989-9a39ebaea7ac")
+		(property "Reference" "D1"
+			(at 132.08 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 132.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 132.08 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 132.08 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 132.08 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 132.08 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 132.08 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9c0a513c-7aa2-46f0-b602-abc4465d8f2b")
+		)
+		(pin "1"
+			(uuid "805e5a74-3cc9-4922-899d-c6733d2ef015")
+		)
+		(instances
+			(project "Flyback_Diode_Card_4"
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/eb34b5a0-160e-4ff4-a213-e5a6dfa04b9a"
+					(reference "D1")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/16fe9f14-c18b-4dfd-ad28-62f36ab1f642"
+					(reference "D5")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/8e494389-4452-45ab-9790-7a6a6ce6224d"
+					(reference "D9")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/0eb36d7f-b9e2-4aa5-b0dd-9d11b2812211"
+					(reference "D13")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/f5db8531-1f34-47a8-8639-0045480a6fc3"
+					(reference "D17")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/50dd0c47-8ae0-440c-927a-2da6e8a3be44"
+					(reference "D21")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/07a3afe7-a901-4c92-8ffe-8f2fbe190490"
+					(reference "D25")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/4a9f5f26-542f-4467-980c-11bab2c21c7b"
+					(reference "D29")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/58674e68-0191-485d-a137-a092bc36da5f"
+					(reference "D37")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/20bf8428-e8e1-4761-bd49-657f3ee812ec"
+					(reference "D41")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/da3c0bfb-796d-4910-b7a2-5b1e7d802cdc"
+					(reference "D45")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/db0d8ee1-5e2b-4537-b169-fb219ff615ef"
+					(reference "D49")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/a64b59ad-277e-49dd-9075-c45668606d91"
+					(reference "D53")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/14b41d4b-f99b-4b5e-a03c-8275da8351f7"
+					(reference "D57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4007")
+		(at 132.08 73.66 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48701184-a623-4ade-891a-720bd4540a31")
+		(property "Reference" "D2"
+			(at 132.08 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 132.08 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 132.08 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "698b808e-2b0e-4313-9b78-5dd406186dbd")
+		)
+		(pin "1"
+			(uuid "6a6132f5-d85e-4938-9156-fb8d1a2778da")
+		)
+		(instances
+			(project "Flyback_Diode_Card_4"
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/eb34b5a0-160e-4ff4-a213-e5a6dfa04b9a"
+					(reference "D2")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/16fe9f14-c18b-4dfd-ad28-62f36ab1f642"
+					(reference "D6")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/8e494389-4452-45ab-9790-7a6a6ce6224d"
+					(reference "D10")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/0eb36d7f-b9e2-4aa5-b0dd-9d11b2812211"
+					(reference "D14")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/f5db8531-1f34-47a8-8639-0045480a6fc3"
+					(reference "D18")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/50dd0c47-8ae0-440c-927a-2da6e8a3be44"
+					(reference "D22")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/07a3afe7-a901-4c92-8ffe-8f2fbe190490"
+					(reference "D26")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/4a9f5f26-542f-4467-980c-11bab2c21c7b"
+					(reference "D30")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/58674e68-0191-485d-a137-a092bc36da5f"
+					(reference "D38")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/20bf8428-e8e1-4761-bd49-657f3ee812ec"
+					(reference "D42")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/da3c0bfb-796d-4910-b7a2-5b1e7d802cdc"
+					(reference "D46")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/db0d8ee1-5e2b-4537-b169-fb219ff615ef"
+					(reference "D50")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/a64b59ad-277e-49dd-9075-c45668606d91"
+					(reference "D54")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/14b41d4b-f99b-4b5e-a03c-8275da8351f7"
+					(reference "D58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4007")
+		(at 161.29 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a751602-71ab-48b8-9d03-8321b900c71c")
+		(property "Reference" "D4"
+			(at 163.83 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 163.83 81.2799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 156.845 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 161.29 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 161.29 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 161.29 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 161.29 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8c3656a7-028c-4765-b532-ae3cbc7dda78")
+		)
+		(pin "1"
+			(uuid "cda7cb20-31f2-4d8b-ba27-e4be1d3e2ca6")
+		)
+		(instances
+			(project "Flyback_Diode_Card_4"
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/eb34b5a0-160e-4ff4-a213-e5a6dfa04b9a"
+					(reference "D4")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/16fe9f14-c18b-4dfd-ad28-62f36ab1f642"
+					(reference "D8")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/8e494389-4452-45ab-9790-7a6a6ce6224d"
+					(reference "D12")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/0eb36d7f-b9e2-4aa5-b0dd-9d11b2812211"
+					(reference "D16")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/f5db8531-1f34-47a8-8639-0045480a6fc3"
+					(reference "D20")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/50dd0c47-8ae0-440c-927a-2da6e8a3be44"
+					(reference "D24")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/07a3afe7-a901-4c92-8ffe-8f2fbe190490"
+					(reference "D28")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/4a9f5f26-542f-4467-980c-11bab2c21c7b"
+					(reference "D36")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/58674e68-0191-485d-a137-a092bc36da5f"
+					(reference "D40")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/20bf8428-e8e1-4761-bd49-657f3ee812ec"
+					(reference "D44")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/da3c0bfb-796d-4910-b7a2-5b1e7d802cdc"
+					(reference "D48")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/db0d8ee1-5e2b-4537-b169-fb219ff615ef"
+					(reference "D52")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/a64b59ad-277e-49dd-9075-c45668606d91"
+					(reference "D56")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/14b41d4b-f99b-4b5e-a03c-8275da8351f7"
+					(reference "D60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4007")
+		(at 144.78 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75e1afa7-fcb3-476f-bc23-9831fc1ed22c")
+		(property "Reference" "D3"
+			(at 147.32 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 147.32 81.2799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 140.335 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 144.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 144.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 144.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 144.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da425da9-6ee4-432e-aace-3285606833b7")
+		)
+		(pin "2"
+			(uuid "5dab9338-42d7-43b3-ad4b-4aa017ea8e3a")
+		)
+		(instances
+			(project "Flyback_Diode_Card_4"
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/eb34b5a0-160e-4ff4-a213-e5a6dfa04b9a"
+					(reference "D3")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/16fe9f14-c18b-4dfd-ad28-62f36ab1f642"
+					(reference "D7")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/8e494389-4452-45ab-9790-7a6a6ce6224d"
+					(reference "D11")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/0eb36d7f-b9e2-4aa5-b0dd-9d11b2812211"
+					(reference "D15")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/f5db8531-1f34-47a8-8639-0045480a6fc3"
+					(reference "D19")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/50dd0c47-8ae0-440c-927a-2da6e8a3be44"
+					(reference "D23")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/07a3afe7-a901-4c92-8ffe-8f2fbe190490"
+					(reference "D27")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/4a9f5f26-542f-4467-980c-11bab2c21c7b"
+					(reference "D35")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/58674e68-0191-485d-a137-a092bc36da5f"
+					(reference "D39")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/20bf8428-e8e1-4761-bd49-657f3ee812ec"
+					(reference "D43")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/da3c0bfb-796d-4910-b7a2-5b1e7d802cdc"
+					(reference "D47")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/db0d8ee1-5e2b-4537-b169-fb219ff615ef"
+					(reference "D51")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/a64b59ad-277e-49dd-9075-c45668606d91"
+					(reference "D55")
+					(unit 1)
+				)
+				(path "/349e3ff8-a9c6-4f26-92e1-61f581ac80f5/14b41d4b-f99b-4b5e-a03c-8275da8351f7"
+					(reference "D59")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
