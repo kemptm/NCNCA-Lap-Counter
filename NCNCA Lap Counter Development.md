@@ -640,3 +640,9 @@ I worked on designing the new flyback diode card.  The new one puts diodes on al
 ## 5/8/2024
 
 I spent most of the afternoon developing the physical layout of the new flyback diode card (version 4).  I did several iterations first figuring out the layout of parts that would simplify the wiring and then working on shrinking the size of the card.  I got it down pretty well, a lot by setting the grid to  50 mils rather than 100 mils. I still need to finish the wiring, but I'm not expecting a problem.  I'll send it for fab tomorrow.  First, however, I really need to test the circuit with the breadboard that I have built.  I'll do that tomorrow.
+
+## 5/9/2024
+
+I tested the basic circuit as breadboarded and found that it works. I re-verified it against the schematic and board design I finished the PCB layout and submitted the board design for manufacturing. I should have the results by May 15.
+
+![Flyback board 4](Flyback_Diode_Card_4/Flyback_Diode_Card_4.png)
