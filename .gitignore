@@ -33,3 +33,4 @@ fp-info-cache
 
 # Generated documentation
 doc/html/**
+*.kicad_pcb.zip
