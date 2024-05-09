@@ -614,3 +614,29 @@ I have a thought that the circuits on the lap counter may be fine, rather than s
 I powered the whole thing up today. The POST ran fine, though one segment, "F" on the 10's digit seems reluctant to reset properly. It mechanically is OK. It might not be getting enough current due to bad connections or my other little problem. That is that the two digits take all of the signals whether or not the digit select relay is picked for that digit.  Somehow, the grounds of the digits are connected.  I'm going to have to wring that out.  Anyway, here's a movie of the first time the segments moved:
 
 <video src="doc/images/PXL_20240503_232853053.mp4" width="640"  controls></video>
+
+## 5/4/2025
+
+I probed around to try to find why the corresponding segments of the two digits always move together, regardless of the digit select relays.  The grounds to the segments are shorted together. This is about the worst case scenario.  I am going to have to pull the digits to find the short(s). I started to take out the digits, however one screw deformed. I tried drilling it out, but it is actually threaded into the plastic of the number frame. I couldn't get it open by taking the head off the screw. I can't make the drill sit on what's left, so I'll have to drill around the screw to get the frame off of it.  A mess. Now that I have taken the thing apart, I checked the grounds again.  Not shorted. ARGH! The problem is with the diode flyback board. Have to continue tomorrow.
+
+## 5/5/2024
+
+While the numbers are all unwired, I tried to diagnose why the segments seem to be joined. I made a number of observations:
+
+1. When the leads are all separated the set lead (SET) and the reset lead (RESET) are not connected to the common lead (COMMON) of the opposite number.
+2. SET and RESET do form a DC path from one to the other. Since the COMMON are all connected together, There is a DC path from any lead on a digit to any other.
+3. When the  from the two digits are connected together, applying a DC power will flip both segments.
+
+I think that I might have to rework the Flyback Diode Board to prevent some of the paths.
+
+## 5/6/2024
+
+I built up a circuit that I think will work.  It adds two more diodes on each solenoid coil that prevent current from running backwards through other coils and creating a circuit for the other digit. I am going to have to build a new flyback diode board with twice as many diodes. I went through several iterations of the circuit on a protoboard.
+
+## 5/7/2024
+
+I worked on designing the new flyback diode card.  The new one puts diodes on all of the inputs so that current can't backflow connecting the wrong digit. It's looking like it will be a good deal bigger than the existing card.  I may have to move the Arduino.
+
+## 5/8/2024
+
+I spent most of the afternoon developing the physical layout of the new flyback diode card (version 4).  I did several iterations first figuring out the layout of parts that would simplify the wiring and then working on shrinking the size of the card.  I got it down pretty well, a lot by setting the grid to  50 mils rather than 100 mils. I still need to finish the wiring, but I'm not expecting a problem.  I'll send it for fab tomorrow.  First, however, I really need to test the circuit with the breadboard that I have built.  I'll do that tomorrow.
