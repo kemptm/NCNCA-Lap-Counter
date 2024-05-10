@@ -643,6 +643,10 @@ I spent most of the afternoon developing the physical layout of the new flyback 
 
 ## 5/9/2024
 
-I tested the basic circuit as breadboarded and found that it works. I re-verified it against the schematic and board design I finished the PCB layout and submitted the board design for manufacturing. I should have the results by May 15.
+I tested the basic circuit as breadboarded and found that it works. I re-verified it against the schematic and board design.
+
+![Breadboard](doc/images/PXL_20240510_004104692.jpg)
+
+ I finished the PCB layout and submitted the board design for manufacturing. I should have the results by May 15.
 
 ![Flyback board 4](Flyback_Diode_Card_4/Flyback_Diode_Card_4.png)
