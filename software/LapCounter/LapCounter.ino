@@ -53,8 +53,8 @@ void setup()
     /// Define the pins for selecting a segment and deciding whether to set or reset
     for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
     {
-        unitsSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
-        tensSegments[i].initSegment(segEnablePins[i], segSetResetPins[i]);
+        unitsSegments[i].initSegment(segEnablePins[i], segSetResetPins[i], UNITS_HOLDS[i]);
+        tensSegments[i].initSegment(segEnablePins[i], segSetResetPins[i], TENS_HOLDS[i]);
 
         pinMode(segEnablePins[i], OUTPUT);    
         digitalWrite(segEnablePins[i],HIGH);
