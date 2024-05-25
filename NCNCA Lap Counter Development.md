@@ -650,3 +650,41 @@ I tested the basic circuit as breadboarded and found that it works. I re-verifie
  I finished the PCB layout and submitted the board design for manufacturing. I should have the results by May 15.
 
 ![Flyback board 4](Flyback_Diode_Card_4/Flyback_Diode_Card_4.png)
+
+## 5/10/2024
+
+While waiting for the new boards to arrive, I inventoried the parts that I will need to put on the board.  I'm in good shape for connectors, but not enough diodes. I ordered 125 1N4007 diodes, for about the same price as 20. They'll be here Monday, while the boards arrive Tuesday. I received word that they have completed manufacturing and have shipped. I have a tracking number, DHL 1660975326.
+
+## 5/15/2024
+
+I received and inspected the new boards.  I tidied up the build area so I can start assembling first thing tomorrow. 
+
+## 5/17/2024
+
+I soldered all of the connectors to the board and then did three diodes, individually.  I'm going to have to figure out a mass production scheme for the diodes.  There are a lot of them.
+
+## 5/18/2024
+
+Half of the diodes are soldered in now.
+
+## 5/19/2024
+
+The card is finished.  I wrung it out and it looks good.
+
+![Finished Card](doc/images/PXL_20240519_204000619.jpg)
+
+## 5/22/2024
+
+I wired all of the solenoids to the Flyback Diode Board. Next, I mount the board and hook the relays and the common wires.
+
+## 5/23/2024
+
+I finished wiring the Flyback Diode Board in.  I'll wring it out again and then test it.
+
+![New Board wired in](doc/images/PXL_20240523_215415701.jpg)
+
+## 5/24/2024
+
+I got it working! Initially, I was running it with really conservative solenoid hold times. That was taking up to two seconds to do the update.  Cranking the hold times down resulted in some of the solenoids not moving reliably. I changed the code so that I could set the solenoid hold times individually by segment.  There are only two slow segments. Here's a show:
+
+<video src="doc/images/PXL_20240524_222607096.mp4" width="640"  controls></video>
