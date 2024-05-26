@@ -688,3 +688,12 @@ I finished wiring the Flyback Diode Board in.  I'll wring it out again and then 
 I got it working! Initially, I was running it with really conservative solenoid hold times. That was taking up to two seconds to do the update.  Cranking the hold times down resulted in some of the solenoids not moving reliably. I changed the code so that I could set the solenoid hold times individually by segment.  There are only two slow segments. Here's a show:
 
 <video src="doc/images/PXL_20240524_222607096.mp4" width="640"  controls></video>
+
+## 5/26/2024
+
+I unfurled the back cover and installed it for the first time. I have to be careful with the charging cable when I put the cover on, as if the cable is inserted wrong, there seems to be some kind of stress and two segments won't work. I'm going to have to work this fragility out of the system.  At any rate, here are two pictures, front and back showing what it looks like:
+
+![Front](doc/images/PXL_20240526_200522543.MP.jpg)
+
+![Back](doc/images/PXL_20240526_200437968.MP.jpg)
+
