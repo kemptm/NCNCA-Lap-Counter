@@ -697,3 +697,41 @@ I unfurled the back cover and installed it for the first time. I have to be care
 
 ![Back](doc/images/PXL_20240526_200437968.MP.jpg)
 
+## 5/27/2024
+
+I think that I have to redo the wires from the back panel into something cleaner. I'm going to shorten the wires on the panel until they just hang below the edge of the panel. Then I'm going to fix the mates so that they only will connect when the panel is a couple of inches up, with strain relief. I may have to redesign the panel, moving the buttons higher or to the other side.  The other side may work better as it involves dragging less wire all the way across the device.
+
+I decided to do it. I measured the clearance to the radio and it works. I'll have to be careful about the power wire, as it wants to go straight down. The switch wires, two of which will terminate at the relay right there and one of which will have to go all the way across.  That's a bunch better than what I had.
+
+## 5/28/2024
+
+I continued work moving the power switches to the other side. In retrospect it might not have been a good idea. Things are tighter there and the buttons tend to hook wires going to the relays. I'll finish it and live with it a while. I may move them back.
+
+## 5/29/2024
+
+I finished moving the power buttons. I'll live with it for a while.  The next thing to do is make the cable to go to the radio.
+
+## 5/30/2024
+
+I worked on building the cable to the radio.  I have it about 1/2 done.
+
+## 6/3/2024
+
+I finished the radio/power down cable today. I also modified the program to look for the radio signals.  I'll try it tomorrow.
+
+## 6/4/2024
+
+The radio seems pretty sketchy.  It only seems to reliably work form about a foot.  I hooked up the  USB to follow the detection.  I noticed that with the USB, it worked a lot better.  I know that the regulator on the Arduino is outputting 6.5 Volts with a 12 Volt input.  the radio must not like this.  I should consider:
+
+1. Power the radio with the 5V power supply.
+2. Change the Arduino to one that will produce the proper voltage.
+
+I'll investigate both of those tomorrow.
+
+## 6/6/2024
+
+It all works. I made the radio work, though the range is pretty poor and I made the power down do its thing too.
+
+On the power-down, I just had to wring out some bad connections. That may be a robustness problem for this device. The cables should probably be remade by someone who is really good at it.
+
+The radio works, but gets really sketchy at more than about 10 feet. Maybe I should buy a new one. They're pretty cheap. The antenna length that's in there seems to be roughly correct. It's stuck to the backside of the cabinet, up against the metal plate of the number. That might be affecting its performance.
