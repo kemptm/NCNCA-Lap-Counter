@@ -735,3 +735,7 @@ It all works. I made the radio work, though the range is pretty poor and I made 
 On the power-down, I just had to wring out some bad connections. That may be a robustness problem for this device. The cables should probably be remade by someone who is really good at it.
 
 The radio works, but gets really sketchy at more than about 10 feet. Maybe I should buy a new one. They're pretty cheap. The antenna length that's in there seems to be roughly correct. It's stuck to the backside of the cabinet, up against the metal plate of the number. That might be affecting its performance.
+
+## 6/7/2024
+
+As I researched about the radio, I found some threads from 9 years ago that indicate that the performance of these radios will never be very good. Perhaps a really good antenna may help. I've been looking around for a suitable antenna, but haven't found one. Coil antennas are available for cheap. They will be the right length, but coil antennas have poorer performance than the straight ones.
