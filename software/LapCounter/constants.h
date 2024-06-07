@@ -46,7 +46,7 @@
 
 #define NUMBER_OF_BUTTONS 9
   const byte numberButtons = 9;
-  const short buttonPins[numberButtons] = { 49,  47,  53,  51,  54,  52,  50,  48,  46};
+  const short buttonPins[numberButtons] = { 49,  47,  53,  51,  52,  50,  48,  46,  42};
   const char buttonNames[numberButtons] = {'1', '2', '3', '4', 'A', 'B', 'C', 'D', 'V'};
 
 /// <summary>	The segment enable pins[ number of segments]. </summary>
@@ -62,7 +62,7 @@ const short tensDigitPin = 36;
 const short unitsDigitPin = 37;
 
 /// <summary>	The power disable pin. </summary>
-const short powerDisablePin = 56;
+const short powerDisablePin = 44;
 
 /// <summary>	The solenoid delay. </summary>
 const int SOLENOID_DELAY = 175;
@@ -76,7 +76,7 @@ const int SELECTED = LOW;
 const int NOT_SELECTED = HIGH;
 
 /// <summary>	two hours. </summary>
-const unsigned long TIMEOUT_MILLISECONDS = 7200000;
+const unsigned long TIMEOUT_MILLISECONDS = 60000 * 60 * 2;
 
 ///-------------------------------------------------------------------------------------------------
 /// <summary>	Values that represent segment status. </summary>

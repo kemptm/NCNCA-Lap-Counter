@@ -49,6 +49,10 @@ void setup()
     digitalWrite(LED_BUILTIN,LOW);
     PRINT_PIN(LED_BUILTIN)
 
+    // Define the output pin for disconnecting the power
+    pinMode(powerDisablePin, OUTPUT);
+    digitalWrite(powerDisablePin,LOW);
+
 
     /// Define the pins for selecting a segment and deciding whether to set or reset
     for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
@@ -84,17 +88,13 @@ void setup()
 
     // Radio buttons
     for (int i = 4; i < numberButtons; i++) {
-        //buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
-        //pinMode(buttons[i].pin,INPUT);
+        buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
+        pinMode(buttons[i].pin,INPUT);
         // quick hack to disable radio keys -- make them INPUT_PULLUP instead of INPUT as they 
         // will be when connected.
-        buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
-        pinMode(buttons[i].pin,INPUT_PULLUP);
+        // buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
+        // pinMode(buttons[i].pin,INPUT_PULLUP);
     }
-
-    // Define the output pin for disconnecting the power
-    pinMode(powerDisablePin, OUTPUT);
-    digitalWrite(powerDisablePin,LOW);
 
     lastTime = 0;
     tens = 0;
@@ -105,7 +105,7 @@ void setup()
     // Power On Self test
     Serial.println("POST");
     digitalWrite(LED_BUILTIN,HIGH);
-    PRINT_PIN(LED_BUILTIN)
+    // PRINT_PIN(LED_BUILTIN)
 
     tensDigit.reset();
     unitsDigit.reset();
@@ -118,7 +118,7 @@ void setup()
     // Signal that we are up and ready
     Serial.println("Initialized");
     digitalWrite(LED_BUILTIN,LOW);
-    PRINT_PIN(LED_BUILTIN)
+    // PRINT_PIN(LED_BUILTIN)
 
 };
 
@@ -134,6 +134,10 @@ void loop()
 {
     // check to see if we should shut down
     currentTime = millis();
+/*    Serial.print(currentTime);
+    Serial.print(" ");
+    Serial.println(lastTime);
+*/
     if (currentTime < lastTime)
     {
         // Clock wrapped (really unlikely)
@@ -142,7 +146,7 @@ void loop()
     if (currentTime - lastTime > TIMEOUT_MILLISECONDS)
     {
         // Timed out
-        digitalWrite(powerDisablePin, LOW); PRINT_PIN(powerDisablePin)// drop the power
+        digitalWrite(powerDisablePin, HIGH); // PRINT_PIN(powerDisablePin)// drop the power
         delay(1000);                        // wait until power dies
     }                                       // doesn't make it out of here
     else

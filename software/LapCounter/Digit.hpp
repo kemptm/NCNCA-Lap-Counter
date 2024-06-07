@@ -67,13 +67,13 @@ public:
     void reset()
     {
         digitalWrite(digitSelect, SELECTED);
-        PRINT_PIN(digitSelect)
+        // PRINT_PIN(digitSelect)
        for (int i = 0; i < segCount; i++)
         {
             segments[i].reset();
         }
         digitalWrite(digitSelect, NOT_SELECTED);
-        PRINT_PIN(digitSelect)
+        // PRINT_PIN(digitSelect)
     };
 
     ///-------------------------------------------------------------------------------------------------
@@ -91,13 +91,13 @@ public:
     {
         short val = ((newValue == 0) && (digitSelect == tensDigitPin)) ? 10 : newValue; // select blank for zero if tens digitalWrite
         digitalWrite(digitSelect, SELECTED);
-        PRINT_PIN(digitSelect)
+        // PRINT_PIN(digitSelect)
         for (int i = 0; i < NUMBER_OF_SEGMENTS; i++)
         {
             segments[i].update(digitSegments[val][i]);
         }
         digitalWrite(digitSelect, NOT_SELECTED);
-        PRINT_PIN(digitSelect)
+        // PRINT_PIN(digitSelect)
     };
 };
 
