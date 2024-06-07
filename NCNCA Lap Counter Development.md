@@ -650,3 +650,92 @@ I tested the basic circuit as breadboarded and found that it works. I re-verifie
  I finished the PCB layout and submitted the board design for manufacturing. I should have the results by May 15.
 
 ![Flyback board 4](Flyback_Diode_Card_4/Flyback_Diode_Card_4.png)
+
+## 5/10/2024
+
+While waiting for the new boards to arrive, I inventoried the parts that I will need to put on the board.  I'm in good shape for connectors, but not enough diodes. I ordered 125 1N4007 diodes, for about the same price as 20. They'll be here Monday, while the boards arrive Tuesday. I received word that they have completed manufacturing and have shipped. I have a tracking number, DHL 1660975326.
+
+## 5/15/2024
+
+I received and inspected the new boards.  I tidied up the build area so I can start assembling first thing tomorrow. 
+
+## 5/17/2024
+
+I soldered all of the connectors to the board and then did three diodes, individually.  I'm going to have to figure out a mass production scheme for the diodes.  There are a lot of them.
+
+## 5/18/2024
+
+Half of the diodes are soldered in now.
+
+## 5/19/2024
+
+The card is finished.  I wrung it out and it looks good.
+
+![Finished Card](doc/images/PXL_20240519_204000619.jpg)
+
+## 5/22/2024
+
+I wired all of the solenoids to the Flyback Diode Board. Next, I mount the board and hook the relays and the common wires.
+
+## 5/23/2024
+
+I finished wiring the Flyback Diode Board in.  I'll wring it out again and then test it.
+
+![New Board wired in](doc/images/PXL_20240523_215415701.jpg)
+
+## 5/24/2024
+
+I got it working! Initially, I was running it with really conservative solenoid hold times. That was taking up to two seconds to do the update.  Cranking the hold times down resulted in some of the solenoids not moving reliably. I changed the code so that I could set the solenoid hold times individually by segment.  There are only two slow segments. Here's a show:
+
+<video src="doc/images/PXL_20240524_222607096.mp4" width="640"  controls></video>
+
+## 5/26/2024
+
+I unfurled the back cover and installed it for the first time. I have to be careful with the charging cable when I put the cover on, as if the cable is inserted wrong, there seems to be some kind of stress and two segments won't work. I'm going to have to work this fragility out of the system.  At any rate, here are two pictures, front and back showing what it looks like:
+
+![Front](doc/images/PXL_20240526_200522543.MP.jpg)
+
+![Back](doc/images/PXL_20240526_200437968.MP.jpg)
+
+## 5/27/2024
+
+I think that I have to redo the wires from the back panel into something cleaner. I'm going to shorten the wires on the panel until they just hang below the edge of the panel. Then I'm going to fix the mates so that they only will connect when the panel is a couple of inches up, with strain relief. I may have to redesign the panel, moving the buttons higher or to the other side.  The other side may work better as it involves dragging less wire all the way across the device.
+
+I decided to do it. I measured the clearance to the radio and it works. I'll have to be careful about the power wire, as it wants to go straight down. The switch wires, two of which will terminate at the relay right there and one of which will have to go all the way across.  That's a bunch better than what I had.
+
+## 5/28/2024
+
+I continued work moving the power switches to the other side. In retrospect it might not have been a good idea. Things are tighter there and the buttons tend to hook wires going to the relays. I'll finish it and live with it a while. I may move them back.
+
+## 5/29/2024
+
+I finished moving the power buttons. I'll live with it for a while.  The next thing to do is make the cable to go to the radio.
+
+## 5/30/2024
+
+I worked on building the cable to the radio.  I have it about 1/2 done.
+
+## 6/3/2024
+
+I finished the radio/power down cable today. I also modified the program to look for the radio signals.  I'll try it tomorrow.
+
+## 6/4/2024
+
+The radio seems pretty sketchy.  It only seems to reliably work form about a foot.  I hooked up the  USB to follow the detection.  I noticed that with the USB, it worked a lot better.  I know that the regulator on the Arduino is outputting 6.5 Volts with a 12 Volt input.  the radio must not like this.  I should consider:
+
+1. Power the radio with the 5V power supply.
+2. Change the Arduino to one that will produce the proper voltage.
+
+I'll investigate both of those tomorrow.
+
+## 6/6/2024
+
+It all works. I made the radio work, though the range is pretty poor and I made the power down do its thing too.
+
+On the power-down, I just had to wring out some bad connections. That may be a robustness problem for this device. The cables should probably be remade by someone who is really good at it.
+
+The radio works, but gets really sketchy at more than about 10 feet. Maybe I should buy a new one. They're pretty cheap. The antenna length that's in there seems to be roughly correct. It's stuck to the backside of the cabinet, up against the metal plate of the number. That might be affecting its performance.
+
+## 6/7/2024
+
+As I researched about the radio, I found some threads from 9 years ago that indicate that the performance of these radios will never be very good. Perhaps a really good antenna may help. I've been looking around for a suitable antenna, but haven't found one. Coil antennas are available for cheap. They will be the right length, but coil antennas have poorer performance than the straight ones.
