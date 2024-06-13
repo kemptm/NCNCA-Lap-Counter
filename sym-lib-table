@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "Project Library")(type "KiCad")(uri "${KIPRJMOD}/library/Project_Library.kicad_sym")(options "")(descr ""))
   (lib (name "1_relay_module")(type "KiCad")(uri "D:/Documents/KiCad/7.0/projects/Lap_Counter_power_physical/library/1_relay_module.kicad_sym")(options "")(descr ""))
+  (lib (name "membrane keypad")(type "KiCad")(uri "D:/Documents/KiCad/7.0/projects/Lap_Counter_power_physical/library/membrane keypad.kicad_sym")(options "")(descr ""))
+  (lib (name "dieserc_remote_control_switch")(type "KiCad")(uri "D:/Documents/KiCad/7.0/projects/Lap_Counter_power_physical/library/dieserc_remote_control_switch.kicad_sym")(options "")(descr ""))
 )

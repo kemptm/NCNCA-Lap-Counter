@@ -730,7 +730,7 @@ I'll investigate both of those tomorrow.
 
 ## 6/6/2024
 
-It all works. I made the radio work, though the range is pretty poor and I made the power down do its thing too.
+It all works. I made the radio work, though the range is pretty poor, and I made the power down do its thing too.
 
 On the power-down, I just had to wring out some bad connections. That may be a robustness problem for this device. The cables should probably be remade by someone who is really good at it.
 
@@ -739,3 +739,25 @@ The radio works, but gets really sketchy at more than about 10 feet. Maybe I sho
 ## 6/7/2024
 
 As I researched about the radio, I found some threads from 9 years ago that indicate that the performance of these radios will never be very good. Perhaps a really good antenna may help. I've been looking around for a suitable antenna, but haven't found one. Coil antennas are available for cheap. They will be the right length, but coil antennas have poorer performance than the straight ones.
+
+## 6/8/2024
+
+I received and did a quick initial test of the new transmitter/receiver.  Works **_MUCH_** better. It was totally solid from 15 feet away in the garage. 
+
+## 6/9/2024
+
+Since I'm about to install the new radio receiver, I thought that I should take a picture of the Version 1.0.0 internals:
+![Exit Old Radio](doc/images/PXL_20240609_214423457.jpg)
+
+After that, I started on putting the new receiver in.  After a bunch of agonizing contemplations, I decided to put the new one where the old one was.  I'll remove it, and rotate the  power down relay to make room for it. This means that I'll have to return the buttons to the right side and build cabling to support it.  This is a bit more work that I had in mind, but the end is that the receiver didn't work on the upper right side.
+
+## 6/12/2024
+
+It's been too hot the past few days to work on the Lap Counter.  I went back at it today. I ripped out the radio and power disconnect relay. The radio was held to the cabinet with silicone putty. I then remounted the relay and mounted the new radio. I'm now ready to hook up the signal wires to the Arduino.  I think that the cable I made before will be long enough to use.  Otherwise, I'll have to make a new one. I changed the code to program the inputs to be active LOW in INPUT-PULLUP mode.  I also updated the schematic.
+
+## 6/13/2025
+
+I wired the radio up. Fortunately, I didn't have to build a whole new cable. It works from more than one foot away.  I tried it from about 12 feet away, and it works fine. I had trouble with some segments not clearing. I wiggled the connectors and it solved itself. This could be a reliability problem.  I'll try it out at the races and see how it does.  I reversed the back panel again and wired the buttons.  It now powers up and down correctly.  The remaining items include build the power cable that runs from the connector to the battery. I have to remember to have enough slack so that the power input cable can bypass the battery and hook directly to the circuit. Cable 3, from the Arduino to the membrane keypad needs to be built.  That will be about it.
+
+Here's a picture of the insides of the chassis with the new radio:
+![New Radio Installed](doc/images/PXL_20240613_231536460.jpg)
