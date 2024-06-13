@@ -88,12 +88,10 @@ void setup()
 
     // Radio buttons
     for (int i = 4; i < numberButtons; i++) {
-        buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
-        pinMode(buttons[i].pin,INPUT);
-        // quick hack to disable radio keys -- make them INPUT_PULLUP instead of INPUT as they 
-        // will be when connected.
-        // buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
-        // pinMode(buttons[i].pin,INPUT_PULLUP);
+        // buttons[i] = Key(buttonNames[i],buttonPins[i],HIGH, 45, IDLE, false);
+        // pinMode(buttons[i].pin,INPUT);
+        buttons[i] = Key(buttonNames[i],buttonPins[i],LOW, 45, IDLE, false);
+        pinMode(buttons[i].pin,INPUT_PULLUP);
     }
 
     lastTime = 0;

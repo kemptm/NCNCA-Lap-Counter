@@ -44,10 +44,10 @@
 /// <remarks>	Kemp, 4/7/2024. </remarks>
 ///-------------------------------------------------------------------------------------------------
 
-#define NUMBER_OF_BUTTONS 9
-  const byte numberButtons = 9;
-  const short buttonPins[numberButtons] = { 49,  47,  53,  51,  52,  50,  48,  46,  42};
-  const char buttonNames[numberButtons] = {'1', '2', '3', '4', 'A', 'B', 'C', 'D', 'V'};
+#define NUMBER_OF_BUTTONS 8
+  const byte numberButtons = 8;
+  const short buttonPins[numberButtons] = { 49,  47,  53,  51,  52,  50,  48,  46};
+  const char buttonNames[numberButtons] = {'1', '2', '3', '4', 'A', 'B', 'C', 'D'};
 
 /// <summary>	The segment enable pins[ number of segments]. </summary>
 const short segEnablePins[NUMBER_OF_SEGMENTS] = {23, 25, 27, 29, 31, 33, 35};
