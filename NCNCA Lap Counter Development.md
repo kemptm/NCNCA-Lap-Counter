@@ -761,3 +761,13 @@ I wired the radio up. Fortunately, I didn't have to build a whole new cable. It 
 
 Here's a picture of the insides of the chassis with the new radio:
 ![New Radio Installed](doc/images/PXL_20240613_231536460.jpg)
+
+## 6/17/2024
+
+I finished and installed cable #3.  It isn't tacked down yet, as I want to test the whole box at a Race before I tack everything down. Here are some pictures showing the cable and its connections.
+
+![Cable 3 Arduino End](doc/images/PXL_20240617_231442009.jpg)
+
+![Cable 3 Keypad End](doc/images/PXL_20240617_231448555.jpg)
+
+![Chassis with Cable 3 in](doc/images/PXL_20240617_231506390.jpg)
