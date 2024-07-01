@@ -771,3 +771,37 @@ I finished and installed cable #3.  It isn't tacked down yet, as I want to test 
 ![Cable 3 Keypad End](doc/images/PXL_20240617_231448555.jpg)
 
 ![Chassis with Cable 3 in](doc/images/PXL_20240617_231506390.jpg)
+
+## 6/19/2024
+
+I added the charging cable that goes from the back panel to the charging port on the battery. I installed it loosely.  It needs to be tied down. I put the back panel on and installed window screen clips to keep both the front and back panels in place. It's ready for its debut. I plan to fix down the cables, spackle the holes and paint them before I turn it over to the NCNCA.
+
+## 6/21/2024
+
+I'm preparing to put the labels on the box instructing users what the keys mean and warning about the charging port. I'm also running it for several hours so that I can be sure that the charging cable is working. The box has correctly powered down after 2 hours.
+
+## 6/22/2024
+
+I  have continued testing the device by leaving it on. It has gotten pretty bad at resetting the segments. Recently I recycled the power and it left 3 segments showing after a reset.  I did a couple of resets after that and they wiggled the segments, but didn't reset them.  Maybe I should make the reset more aggressive.  A possibility is that as the battery voltage declines that the current isn't enough to do the reset. I need to test the voltage in the circuit now.
+
+## 6/23/2024
+
+I tried a reset of the Lap Counter this morning and it left 3 segments un-reset. I tried forcing a reset, but it didn't help. Then I plugged the charger onto the battery. It's only a 1 amp charger, so it could take a while.  If things are up-to-snuff when charging completes, then I'll know that voltage droop is the culprit. Now given that the measured current flow when the system is on and idle is about 100 mA and about 400 mA when the solenoids are moving, a 5.2 Amp-hour battery should last from 40 to 50 hours.  That may be for a voltage drop to 9 volts, which might be too low. I will run it to the point where it leaves segments un-moved and then measure the battery voltage. After 4 hours, it left one segment standing. This isn't good. I'm running it for another couple of hours.
+
+## 6/24/2024
+
+The battery power is not drooping. The voltage is pretty solid at 12.25V after running the box for 4 hours. When the relays and solenoids are energized, the voltage is 12.15V. My problem seems to be the "F" segment in the tens digit.  Sometimes the "F" segment in the units digit sticks as well. Both segments seem to set just fine. They don't reset. I tried holding the power on the reset for seconds, but that didn't work. I checked the circuits from the 12V line, through the segment select relay and the set-reset relay to the fly-back board and off to the segment. All connections are tight and with adequate cable diameter. I'm going to write a test program that will agitate the segment, hoping to break it loose and then slam it into reset position. 
+
+## 6/25/2024
+
+I tried several different methods of jiggling the segments.  Some were worse than  nothing. Nothing, in fact, worked. I'm charging the battery and will see what voltage will make the segment go when the battery is fresh. Then I'll look at increasing the voltage that the segments see. Perhaps I'll use a buck converter to raise the voltage to 13 or 14 volts.
+
+## 6/26/2024
+
+I recharged the battery and got it to where it is outputting 12.6V.  The segment works. When the battery settles to 12.1V, which is where it runs most of its life, then the segment doesn't work. I bought two cheap voltage up converters. One from Amazon and one from Digikey.  We'll see if I can run just a little more voltage on those coils. Then I'll have to figure out how to fit the converter into the box.
+
+## 6/27/2024
+
+I tried out the DC-DC Boost Regulator and it works just fine.  All segment moves are very crisp with a 12.7V supply.  Right now, the battery is providing 12.6V.  I'm going to run it a while to be sure that running the regulator doesn't run the power down too fast.  I don't want to have to control the power to the regulator to only when I'm going to move the solenoids. Here's a picture of the regulator in action, before being installed.
+
+![Regulator](doc/images/PXL_20240627_221937660.jpg)

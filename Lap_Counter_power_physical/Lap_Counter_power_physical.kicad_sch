@@ -1710,6 +1710,141 @@
 				)
 			)
 		)
+		(symbol "Project_Library:Ymiko_DC-DC_regulator"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "DCR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DC-DC Boost Regulator"
+				(at 0 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Ymiko_DC-DC_regulator_0_1"
+				(rectangle
+					(start -6.35 -1.27)
+					(end 6.35 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Ymiko_DC-DC_regulator_1_1"
+				(pin power_in line
+					(at -8.89 -3.81 0)
+					(length 2.54)
+					(name "Vin+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -6.35 0)
+					(length 2.54)
+					(name "Vin-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 8.89 -3.81 180)
+					(length 2.54)
+					(name "Vout+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 8.89 -6.35 180)
+					(length 2.54)
+					(name "Vout-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Regulator_Linear:LT1963AxST-2.5"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2353,6 +2488,12 @@
 		)
 	)
 	(junction
+		(at 228.6 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "010ebfe2-8811-4221-9bb2-eed0d10762b9")
+	)
+	(junction
 		(at 241.3 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2575,6 +2716,12 @@
 		(uuid "7fec742d-71e4-4fda-bc01-886f92c572b0")
 	)
 	(junction
+		(at 228.6 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80f71a5e-835f-4e6d-a9ef-af783c39a469")
+	)
+	(junction
 		(at 45.72 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2593,10 +2740,10 @@
 		(uuid "91aba5f2-913d-4ccf-a090-15eca7732285")
 	)
 	(junction
-		(at 228.6 120.65)
+		(at 226.06 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "94ef6c60-ea07-4d43-895a-13050cfe437e")
+		(uuid "958ec9f1-29d0-4cb2-a303-1ea58c73c6ee")
 	)
 	(junction
 		(at 44.45 48.26)
@@ -2689,12 +2836,6 @@
 		(uuid "d9bdc81c-c097-43b9-81ef-1891acbee839")
 	)
 	(junction
-		(at 228.6 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d9f39c71-e098-40d9-a3c6-859595e64f6a")
-	)
-	(junction
 		(at 241.3 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2711,6 +2852,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e04e75fd-885e-4659-bf2e-edf5d714550f")
+	)
+	(junction
+		(at 220.98 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edf0425d-1b24-4dbd-9708-d84855998606")
 	)
 	(junction
 		(at 228.6 146.05)
@@ -2764,7 +2911,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 146.05) (xy 228.6 146.05)
+			(xy 120.65 146.05) (xy 220.98 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2944,6 +3091,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 163.83) (xy 243.84 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eef5b9a-ad30-4606-b895-0fb8945b51c3")
+	)
+	(wire
+		(pts
 			(xy 207.01 97.79) (xy 228.6 97.79)
 		)
 		(stroke
@@ -3004,6 +3161,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 146.05) (xy 220.98 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2eef1e72-326a-49ab-992a-0deeeff1ed14")
+	)
+	(wire
+		(pts
 			(xy 241.3 115.57) (xy 228.6 115.57)
 		)
 		(stroke
@@ -3034,6 +3201,26 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 160.02) (xy 226.06 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30d2a435-fc26-4f83-9d0c-288ed133c5f7")
+	)
+	(wire
+		(pts
+			(xy 198.12 120.65) (xy 228.6 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "317263d1-0da7-44b5-8f5c-1641873319c5")
+	)
+	(wire
+		(pts
 			(xy 175.26 92.71) (xy 175.26 101.6)
 		)
 		(stroke
@@ -3061,6 +3248,16 @@
 			(type default)
 		)
 		(uuid "32b629fb-17f7-413b-8eec-e77419fb11cc")
+	)
+	(wire
+		(pts
+			(xy 205.74 123.19) (xy 228.6 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34512b55-3690-42f1-90be-ab58168e118e")
 	)
 	(wire
 		(pts
@@ -3161,6 +3358,16 @@
 			(type default)
 		)
 		(uuid "4453d3bf-ed72-487a-8284-97e22078e41a")
+	)
+	(wire
+		(pts
+			(xy 198.12 121.92) (xy 198.12 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44ea51f1-3db9-441e-88b1-859effd7ef1f")
 	)
 	(wire
 		(pts
@@ -3344,6 +3551,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 157.48) (xy 226.06 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "616011c5-16bf-4f8c-a842-c2387be9d8d2")
+	)
+	(wire
+		(pts
 			(xy 161.29 101.6) (xy 167.64 101.6)
 		)
 		(stroke
@@ -3371,16 +3588,6 @@
 			(type default)
 		)
 		(uuid "64bd3f12-2b8c-4439-bdf0-c0eb2fb784a3")
-	)
-	(wire
-		(pts
-			(xy 226.06 120.65) (xy 228.6 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6558f61d-8206-4d1c-964f-b810f93bf583")
 	)
 	(wire
 		(pts
@@ -3564,6 +3771,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 163.83) (xy 226.06 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cfbc3b1-dfdd-4cc0-a9a3-ea144caa2223")
+	)
+	(wire
+		(pts
 			(xy 191.77 39.37) (xy 191.77 135.89)
 		)
 		(stroke
@@ -3644,6 +3861,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 160.02) (xy 243.84 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86aa0af8-a58a-49fb-b5a1-9e744bc50d0a")
+	)
+	(wire
+		(pts
 			(xy 137.16 55.88) (xy 148.59 55.88)
 		)
 		(stroke
@@ -3681,6 +3908,16 @@
 			(type default)
 		)
 		(uuid "8ef59af9-8857-4dca-bcec-2dd4eda7d5ce")
+	)
+	(wire
+		(pts
+			(xy 205.74 157.48) (xy 205.74 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f356cac-eb62-47f7-bad3-c4d76c64d0c8")
 	)
 	(wire
 		(pts
@@ -3734,6 +3971,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 157.48) (xy 246.38 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "963ff420-77f3-49e8-95ca-e33edf8aa9a8")
+	)
+	(wire
+		(pts
 			(xy 83.82 53.34) (xy 123.19 53.34)
 		)
 		(stroke
@@ -3761,6 +4008,16 @@
 			(type default)
 		)
 		(uuid "9adfbc54-3462-4b1b-960a-45800dfa03a7")
+	)
+	(wire
+		(pts
+			(xy 220.98 146.05) (xy 228.6 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d19d9e0-9507-4f43-8533-92db913a6089")
 	)
 	(wire
 		(pts
@@ -4124,16 +4381,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 123.19) (xy 198.12 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db0899b8-0f00-4f5b-b506-751ece5f4785")
-	)
-	(wire
-		(pts
 			(xy 41.91 168.91) (xy 41.91 165.1)
 		)
 		(stroke
@@ -4241,16 +4488,6 @@
 			(type default)
 		)
 		(uuid "ed0ed126-ed0c-402b-9ab0-defaae9c4285")
-	)
-	(wire
-		(pts
-			(xy 198.12 123.19) (xy 198.12 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee1a35ff-9150-4ba5-bdc6-50323d7d6b60")
 	)
 	(wire
 		(pts
@@ -4476,22 +4713,22 @@
 	)
 	(global_label "Solenoid Power"
 		(shape passive)
-		(at 226.06 120.65 180)
+		(at 246.38 157.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "b8d28f83-977c-4e0f-99b5-4d5922203206")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 209.4301 120.65 0)
+			(at 263.0099 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5265,6 +5502,80 @@
 			(project "Lap_Counter_power_physical"
 				(path "/78a9eac1-cabd-44e7-bd78-57e12cee5a04"
 					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Project_Library:Ymiko_DC-DC_regulator")
+		(at 234.95 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "415bc31a-2faf-49b1-80dc-c03000fad314")
+		(property "Reference" "DCR1"
+			(at 234.95 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DC-DC Boost Regulator"
+			(at 234.95 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6d748a7-172b-43ff-9a08-6350dccd28cc")
+		)
+		(pin "4"
+			(uuid "ba9d4424-491d-4cc2-a865-c19c4b10ed37")
+		)
+		(pin "2"
+			(uuid "f4e55e56-db22-414f-8054-06037b6e1e5c")
+		)
+		(pin "3"
+			(uuid "99718dcd-6a4d-4f88-923a-efc013512466")
+		)
+		(instances
+			(project ""
+				(path "/78a9eac1-cabd-44e7-bd78-57e12cee5a04"
+					(reference "DCR1")
 					(unit 1)
 				)
 			)
