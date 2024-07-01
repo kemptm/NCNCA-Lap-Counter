@@ -60,10 +60,23 @@ public:
 
     void reset()
     {
-        digitalWrite(setResetPin, HIGH); PRINT_PIN(setResetPin)
-        digitalWrite(segmentPin, SELECTED); PRINT_PIN(segmentPin)
+        int segmentVibe = 20;
+        digitalWrite(segmentPin, SELECTED);
+        for (int i = 0; i < 5; i++)
+        {
+            delay(segmentVibe);
+            digitalWrite(setResetPin, HIGH);
+            //PRINT_PIN(setResetPin)
+            delay(segmentVibe);
+            digitalWrite(setResetPin, LOW);
+            //PRINT_PIN(setResetPin)
+        }
+        digitalWrite(setResetPin, HIGH);
+        //PRINT_PIN(setResetPin)
+        //PRINT_PIN(segmentPin)
         delay(solenoid_hold);
-        digitalWrite(segmentPin, NOT_SELECTED); PRINT_PIN(segmentPin)
+        digitalWrite(segmentPin, NOT_SELECTED);
+        //PRINT_PIN(segmentPin)
         // digitalWrite(setResetPin, HIGH);PRINT_PIN(setResetPin) unnecessary
 
         status = SegmentStatus::HIDDEN;
@@ -83,13 +96,21 @@ public:
 
     void update(SegmentStatus ss)
     {
+        int segmentVibe = 10;
         if (ss != status)
+            digitalWrite(segmentPin, SELECTED); // PRINT_PIN(segmentPin)
         {
-            digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW); PRINT_PIN(setResetPin)
-            digitalWrite(segmentPin, SELECTED);  PRINT_PIN(segmentPin)
+            for (int i = 0; i < 5; i++)
+            {
+                delay(segmentVibe);
+                digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW); // PRINT_PIN(setResetPin)
+                delay(segmentVibe);
+                digitalWrite(setResetPin, ss != SegmentStatus::HIDDEN ? HIGH : LOW); // PRINT_PIN(setResetPin)
+            }
+            digitalWrite(setResetPin, ss == SegmentStatus::HIDDEN ? HIGH : LOW); // PRINT_PIN(setResetPin)
             delay(solenoid_hold);
-            digitalWrite(segmentPin, NOT_SELECTED);  PRINT_PIN(segmentPin)
-            digitalWrite(setResetPin, HIGH); PRINT_PIN(setResetPin)
+            digitalWrite(segmentPin, NOT_SELECTED); // PRINT_PIN(segmentPin)
+            digitalWrite(setResetPin, HIGH);        // PRINT_PIN(setResetPin)
 
             status = ss;
         }

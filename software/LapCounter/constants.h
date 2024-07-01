@@ -65,9 +65,9 @@ const short unitsDigitPin = 37;
 const short powerDisablePin = 44;
 
 /// <summary>	The solenoid delay. </summary>
-const int SOLENOID_DELAY = 175;
-const unsigned short TENS_HOLDS[NUMBER_OF_SEGMENTS] = {100,100,100,100,100,200,100};
-const unsigned short UNITS_HOLDS[NUMBER_OF_SEGMENTS] = {100,100,100,100,100,200,100};
+// const int SOLENOID_DELAY = 175;
+const unsigned short TENS_HOLDS[NUMBER_OF_SEGMENTS] = {150,150,150,150,150,150,150};
+const unsigned short UNITS_HOLDS[NUMBER_OF_SEGMENTS] = {150,150,150,150,150,150,150};
 
 /// <summary>	The selected. </summary>
 const int SELECTED = LOW;
